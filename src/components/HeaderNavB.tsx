@@ -9,9 +9,10 @@ const HeaderNavB = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Slim top bar */}
-      <div className="bg-primary text-primary-foreground/60 text-xs py-1.5 px-4">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center">
-          <span>★ 4.9/5 from 150+ Google reviews</span>
+      <div className="bg-accent/20 px-4 py-2">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2 text-xs text-foreground/70">
+          <span>Have questions?</span>
+          <a href="#faqs" className="font-semibold text-primary hover:underline">View our FAQs →</a>
         </div>
       </div>
 
