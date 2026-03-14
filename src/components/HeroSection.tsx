@@ -99,11 +99,12 @@ const HeroSection = () => {
 
           {/* Right Form */}
           <motion.div
+            id="form"
             custom={1}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="bg-muted rounded-lg p-6 md:p-8 shadow-sm"
+            className="bg-muted rounded-lg p-6 md:p-8 shadow-sm scroll-mt-24"
           >
             <p className="text-center text-sm text-foreground mb-6 leading-relaxed">
               Brought to you by IDR Law – the only law firm in the UK specialising solely in dealing with disputes over wills, estates and trusts.
