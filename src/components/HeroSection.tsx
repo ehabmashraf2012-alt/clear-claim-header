@@ -67,6 +67,7 @@ const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
                 className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
               >
                 Will &amp; inheritance dispute specialists.{" "}
+                <br className="block md:hidden" />
                 <span className="text-accent italic">It's all we do!</span>
               </motion.h1>
             )}
