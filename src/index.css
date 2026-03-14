@@ -80,8 +80,7 @@
   }
 }
 
-#lovable-badge,
-#lovable-badge *,
-[id^="lovable-badge"] {
+aside[role="complementary"][id$="-badge"],
+aside[role="complementary"][id$="-badge"] * {
   display: none !important;
 }
