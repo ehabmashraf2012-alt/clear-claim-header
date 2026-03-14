@@ -188,27 +188,31 @@ const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
       </div>
 
       {/* Bottom sticky bar */}
-      <motion.div
-        custom={8}
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-4 py-3 z-50"
-      >
-        <div className="container mx-auto max-w-6xl flex items-center justify-center sm:justify-between">
-          <p className="text-sm md:text-base font-medium text-foreground hidden sm:block">
-            Involved in a will dispute or inheritance claim?
-          </p>
-          <a
-            href="#form"
-            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
-            className="group bg-accent text-accent-foreground px-5 py-2 font-semibold text-xs flex items-center gap-1.5 rounded-full hover:opacity-90 transition-opacity sm:ml-auto"
+      <AnimatePresence>
+        {showStickyBar && (
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 60, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-4 py-3 z-50"
           >
-            Fast Claim Assessment
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-          </a>
-        </div>
-      </motion.div>
+            <div className="container mx-auto max-w-6xl flex items-center justify-center sm:justify-between">
+              <p className="text-sm md:text-base font-medium text-foreground hidden sm:block">
+                Involved in a will dispute or inheritance claim?
+              </p>
+              <a
+                href="#form"
+                onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
+                className="group bg-accent text-accent-foreground px-5 py-2 font-semibold text-xs flex items-center gap-1.5 rounded-full hover:opacity-90 transition-opacity sm:ml-auto"
+              >
+                Fast Claim Assessment
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
