@@ -18,6 +18,17 @@ const HeaderNavB = () => {
       {/* Main nav */}
       <div className="bg-background border-b border-border px-4 py-3">
         <div className="container mx-auto max-w-6xl flex items-center justify-between">
+          {/* CTA */}
+          <motion.a
+            href="#form"
+            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-accent text-accent-foreground px-4 py-2 text-xs font-bold flex items-center gap-1.5 rounded-full hover:brightness-105 transition-all whitespace-nowrap"
+          >
+            Free Claim Assessment <ArrowRight className="w-3.5 h-3.5" />
+          </motion.a>
+
           {/* Logo */}
           <div className="flex items-center gap-0.5">
             {["I", "D", "R"].map((letter) => (
@@ -30,17 +41,6 @@ const HeaderNavB = () => {
             ))}
             <span className="ml-2 text-lg font-light tracking-[0.25em] text-foreground">Law</span>
           </div>
-
-          {/* CTA */}
-          <motion.a
-            href="#form"
-            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-accent text-accent-foreground px-4 py-2 text-xs font-bold flex items-center gap-1.5 rounded-full hover:brightness-105 transition-all"
-          >
-            Free Claim Assessment <ArrowRight className="w-3.5 h-3.5" />
-          </motion.a>
         </div>
       </div>
 
