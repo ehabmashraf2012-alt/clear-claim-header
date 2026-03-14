@@ -36,16 +36,14 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Content */}
           <div>
-            <motion.h1
+            <motion.p
               custom={0}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
+              className="text-base font-semibold text-foreground mb-5"
             >
-              Will &amp; inheritance dispute specialists.{" "}
-              <span className="text-accent italic">It's all we do!</span>
-            </motion.h1>
+            </motion.p>
 
             <motion.p
               custom={1}
