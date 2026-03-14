@@ -9,6 +9,15 @@ const usps = [
   { icon: Users, text: "30+ specialist will dispute lawyers" },
 ];
 const HeaderNavB = () => {
+  const [uspIndex, setUspIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUspIndex((prev) => (prev + 1) % usps.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
