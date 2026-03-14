@@ -2,6 +2,7 @@ import CookieBanner from "@/components/CookieBanner";
 import ABTestHeader from "@/components/ABTestHeader";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
+import MeetTheTeam from "@/components/MeetTheTeam";
 
 const Index = () => {
   return (
@@ -10,6 +11,7 @@ const Index = () => {
       <ABTestHeader />
       <AnnouncementBar />
       <HeroSection />
+      <MeetTheTeam />
     </div>
   );
 };
