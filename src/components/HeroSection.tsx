@@ -32,6 +32,26 @@ const fadeUp = {
 };
 
 const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
+  const isMobile = useIsMobile();
+  const [showStickyBar, setShowStickyBar] = useState(variant === "A");
+
+  useEffect(() => {
+    if (variant !== "B" || !isMobile) {
+      setShowStickyBar(true);
+      return;
+    }
+    const handleScroll = () => {
+      const header = document.querySelector("header");
+      if (header) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        setShowStickyBar(headerBottom < 0);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [variant, isMobile]);
+
   return (
     <section className="bg-background px-4 md:px-8 py-8 md:py-12">
       <div className="container mx-auto max-w-6xl">
