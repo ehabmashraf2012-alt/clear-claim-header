@@ -53,11 +53,22 @@ const HeaderNavB = () => {
         </div>
       </div>
 
-      {/* Reviews bar */}
-      <div className="bg-primary text-primary-foreground/60 text-xs py-2 px-4">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2">
-          <span className="text-accent">★</span>
-          <span>4.9/5 from 150+ Google reviews</span>
+      {/* USP slider */}
+      <div className="bg-accent px-4 py-2 overflow-hidden">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center h-5">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={uspIndex}
+              initial={{ y: 16, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -16, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className="flex items-center gap-2 text-xs font-semibold text-accent-foreground"
+            >
+              {(() => { const Icon = usps[uspIndex].icon; return <Icon className="w-3.5 h-3.5" />; })()}
+              {usps[uspIndex].text}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
