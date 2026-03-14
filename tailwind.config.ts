@@ -47,6 +47,23 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cookie: {
+          DEFAULT: "hsl(var(--cookie-bg))",
+          foreground: "hsl(var(--cookie-foreground))",
+        },
+        announcement: {
+          DEFAULT: "hsl(var(--announcement-bg))",
+          foreground: "hsl(var(--announcement-foreground))",
+        },
+        step: {
+          DEFAULT: "hsl(var(--step-bg))",
+          foreground: "hsl(var(--step-foreground))",
+        },
+        cta: {
+          DEFAULT: "hsl(var(--cta-bg))",
+          foreground: "hsl(var(--cta-foreground))",
+        },
+        star: "hsl(var(--star-color))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
