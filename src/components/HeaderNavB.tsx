@@ -1,94 +1,89 @@
-import { ArrowRight, CheckCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-
-const trustMessages = [
-  "No Win, No Fee — zero risk to you",
-  "Free expert assessment within 24 hours",
-  "150+ five-star Google reviews",
-  "UK's only specialist will dispute firm",
-];
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HeaderNavB = () => {
-  const [msgIndex, setMsgIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMsgIndex((prev) => (prev + 1) % trustMessages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <header className="relative overflow-hidden">
-      {/* Rotating trust banner */}
-      <div className="bg-accent py-2 px-4">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center h-5 overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={msgIndex}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="flex items-center gap-2 text-sm font-semibold text-accent-foreground"
-            >
-              <CheckCircle className="w-3.5 h-3.5" />
-              {trustMessages[msgIndex]}
-            </motion.div>
-          </AnimatePresence>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Slim top bar */}
+      <div className="bg-primary text-primary-foreground/60 text-xs py-1.5 px-4">
+        <div className="container mx-auto max-w-6xl flex items-center justify-between">
+          <span>The UK's only specialist will &amp; inheritance dispute firm</span>
+          <span className="hidden sm:inline">★ 4.9/5 from 150+ reviews</span>
         </div>
       </div>
 
-      {/* Main header — dark, full bleed */}
-      <div className="bg-primary px-4 py-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center gap-0.5">
-              {["I", "D", "R"].map((letter) => (
-                <span
-                  key={letter}
-                  className="border border-accent/60 px-1.5 py-0.5 text-sm font-bold text-accent"
-                >
-                  {letter}
-                </span>
-              ))}
-              <span className="ml-2 text-lg font-light tracking-[0.25em] text-primary-foreground/70">
-                Law
-              </span>
-            </div>
-
-            {/* Right side — tagline + CTA */}
-            <div className="flex items-center gap-4">
-              <p className="hidden md:block text-primary-foreground/60 text-sm max-w-[200px] leading-snug">
-                The UK's only specialist will &amp; inheritance dispute firm
-              </p>
-              <motion.a
-                href="#form"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="relative bg-accent text-accent-foreground px-5 py-2.5 text-sm font-bold flex items-center gap-2 rounded-full shadow-lg shadow-accent/30 overflow-hidden group"
+      {/* Main nav */}
+      <div className="bg-background border-b border-border px-4 py-3">
+        <div className="container mx-auto max-w-6xl flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-0.5">
+            {["I", "D", "R"].map((letter) => (
+              <span
+                key={letter}
+                className="border-2 border-primary px-1.5 py-0.5 text-sm font-bold text-primary"
               >
-                <span className="relative z-10 flex items-center gap-2">
-                  Start Free Assessment
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <motion.span
-                  className="absolute inset-0 bg-primary-foreground/10"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "100%" }}
-                  transition={{ duration: 0.5 }}
-                />
-              </motion.a>
-            </div>
+                {letter}
+              </span>
+            ))}
+            <span className="ml-2 text-lg font-light tracking-[0.25em] text-foreground">Law</span>
           </div>
+
+          {/* CTA */}
+          <motion.a
+            href="#form"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-accent text-accent-foreground px-5 py-2.5 text-sm font-bold flex items-center gap-2 rounded-full hover:brightness-105 transition-all"
+          >
+            Free Claim Assessment <ArrowRight className="w-4 h-4" />
+          </motion.a>
         </div>
       </div>
 
-      {/* Accent line */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent" />
-    </header>
+      {/* Dark hero banner — HCR-inspired */}
+      <div className="bg-primary text-primary-foreground px-4 py-12 md:py-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-accent text-sm font-semibold tracking-widest uppercase mb-4"
+          >
+            No Win, No Fee
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-2xl"
+          >
+            Will &amp; inheritance dispute specialists.{" "}
+            <span className="text-accent italic">It's all we do.</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="text-primary-foreground/70 text-base md:text-lg max-w-xl mb-8"
+          >
+            Resolving sensitive disputes with care and integrity. Get expert guidance within 24 hours.
+          </motion.p>
+          <motion.a
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            href="#form"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-7 py-3 font-bold text-sm rounded-full hover:brightness-105 transition-all"
+          >
+            Start Your Free Assessment <ArrowRight className="w-4 h-4" />
+          </motion.a>
+        </div>
+      </div>
+    </motion.header>
   );
 };
 
