@@ -37,11 +37,11 @@ const HeaderNavB = () => {
         </div>
       </div>
 
-      {/* FAQ bar */}
-      <div className="bg-accent/20 px-4 py-2">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2 text-xs text-foreground/70">
-          <span>Have questions?</span>
-          <a href="#faqs" className="font-semibold text-primary hover:underline">View our FAQs →</a>
+      {/* Reviews bar */}
+      <div className="bg-primary text-primary-foreground/60 text-xs py-2 px-4">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2">
+          <span className="text-accent">★</span>
+          <span>4.9/5 from 150+ Google reviews</span>
         </div>
       </div>
 
