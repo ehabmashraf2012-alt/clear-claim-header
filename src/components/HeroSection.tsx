@@ -43,30 +43,19 @@ const HeroSection = () => {
               animate="visible"
               className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
             >
-              Involved in a will dispute or inheritance claim?
+              Will &amp; inheritance dispute specialists.{" "}
+              <span className="text-accent italic">It's all we do!</span>
             </motion.h1>
 
-            <motion.div
+            <motion.p
               custom={1}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="inline-block border border-border rounded-full px-5 py-2 mb-5"
+              className="text-base font-semibold text-foreground mb-5"
             >
-              <p className="text-sm text-foreground">
-                Inheritance dispute specialists. <strong>It's all we do.</strong>
-              </p>
-            </motion.div>
-
-            <motion.h2
-              custom={2}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              className="text-xl md:text-2xl font-bold text-foreground leading-snug mb-5"
-            >
-              Your resolution to a difficult<br />and sensitive dispute.
-            </motion.h2>
+              Resolving sensitive disputes with care and integrity.
+            </motion.p>
 
             <ol className="space-y-4 mb-7">
               {[

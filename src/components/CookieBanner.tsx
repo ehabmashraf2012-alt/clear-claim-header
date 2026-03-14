@@ -16,8 +16,8 @@ const CookieBanner = () => {
         >
           <div className="container mx-auto max-w-6xl flex items-center justify-between gap-3">
             <p className="opacity-80">
-              We use cookies to give you the best online experience. By using this website you agree with our{" "}
-              <a href="#" className="underline font-medium">cookie policy</a>
+              Cookies are used to enhance your experience. By using this website you agree with our{" "}
+              <a href="#" className="underline font-medium">cookie policy</a>.
             </p>
             <button
               onClick={() => setVisible(false)}
