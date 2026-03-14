@@ -1,6 +1,13 @@
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
+const usps = [
+  { icon: Award, text: "★ 4.9/5 from 150+ Google reviews" },
+  { icon: Shield, text: "No Win, No Fee — zero risk to you" },
+  { icon: Clock, text: "Free expert assessment within 24 hours" },
+  { icon: Users, text: "30+ specialist will dispute lawyers" },
+];
 const HeaderNavB = () => {
   return (
     <motion.header
