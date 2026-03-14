@@ -25,7 +25,7 @@ const HeaderNavB = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Main nav */}
-      <div className="bg-background border-b border-border px-2 sm:px-4 py-4">
+      <div className="bg-background border-b border-border px-1 sm:px-3 py-4">
         <div className="container mx-auto max-w-6xl flex items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-0.5">
