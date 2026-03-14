@@ -177,10 +177,11 @@ const HeroSection = () => {
           </p>
           <a
             href="#form"
-            className="group bg-accent text-accent-foreground px-6 py-2.5 font-semibold text-sm flex items-center gap-2 rounded-full hover:opacity-90 transition-opacity sm:ml-auto"
+            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="group bg-accent text-accent-foreground px-5 py-2 font-semibold text-xs flex items-center gap-1.5 rounded-full hover:opacity-90 transition-opacity sm:ml-auto"
           >
             Fast Claim Assessment
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>
       </motion.div>

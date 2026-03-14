@@ -78,7 +78,8 @@ const HeaderNavB = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             href="#form"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-7 py-3 font-bold text-sm rounded-full hover:brightness-105 transition-all"
+            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-2.5 font-bold text-sm rounded-full hover:brightness-105 transition-all"
           >
             Start Your Free Assessment <ArrowRight className="w-4 h-4" />
           </motion.a>

@@ -30,9 +30,10 @@ const HeaderNav = () => {
           </a>
           <a
             href="#form"
-            className="bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold flex items-center gap-2 rounded-sm hover:opacity-90 transition-opacity"
+            onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="bg-primary text-primary-foreground px-4 py-2 text-xs font-semibold flex items-center gap-1.5 rounded-sm hover:opacity-90 transition-opacity"
           >
-            Free claim assessment <ArrowRight className="w-4 h-4" />
+            Free claim assessment <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>
