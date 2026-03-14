@@ -79,3 +79,9 @@
     font-family: 'Playfair Display', serif;
   }
 }
+
+#lovable-badge,
+#lovable-badge *,
+[id^="lovable-badge"] {
+  display: none !important;
+}
