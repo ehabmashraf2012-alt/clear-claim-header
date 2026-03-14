@@ -171,7 +171,7 @@ const HeroSection = () => {
         animate="visible"
         className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-4 py-3 z-50"
       >
-        <div className="container mx-auto max-w-6xl flex items-center justify-between">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center sm:justify-between">
           <p className="text-sm md:text-base font-medium text-foreground hidden sm:block">
             Involved in a will dispute or inheritance claim?
           </p>
