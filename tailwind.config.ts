@@ -64,6 +64,8 @@ export default {
           foreground: "hsl(var(--cta-foreground))",
         },
         star: "hsl(var(--star-color))",
+        "hero-start": "hsl(var(--hero-gradient-start))",
+        "hero-end": "hsl(var(--hero-gradient-end))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

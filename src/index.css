@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -12,13 +12,13 @@
     --card-foreground: 214 40% 16%;
     --popover: 0 0% 100%;
     --popover-foreground: 214 40% 16%;
-    --primary: 214 40% 25%;
+    --primary: 214 42% 22%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 43 55% 55%;
-    --secondary-foreground: 214 40% 16%;
+    --secondary: 42 65% 52%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 210 20% 96%;
     --muted-foreground: 214 15% 45%;
-    --accent: 43 55% 55%;
+    --accent: 42 65% 52%;
     --accent-foreground: 214 40% 16%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -26,15 +26,18 @@
     --input: 214 20% 90%;
     --ring: 214 40% 25%;
     --radius: 0.5rem;
-    --cookie-bg: 43 55% 55%;
-    --cookie-foreground: 214 40% 16%;
-    --announcement-bg: 43 75% 72%;
-    --announcement-foreground: 214 40% 16%;
-    --step-bg: 214 40% 25%;
-    --step-foreground: 0 0% 100%;
-    --cta-bg: 43 55% 55%;
-    --cta-foreground: 214 40% 16%;
-    --star-color: 43 90% 55%;
+
+    --cookie-bg: 214 42% 22%;
+    --cookie-foreground: 42 40% 85%;
+    --announcement-bg: 42 55% 68%;
+    --announcement-foreground: 214 42% 15%;
+    --step-bg: 214 42% 22%;
+    --step-foreground: 42 65% 52%;
+    --cta-bg: 42 65% 52%;
+    --cta-foreground: 0 0% 100%;
+    --star-color: 42 90% 55%;
+    --hero-gradient-start: 214 42% 22%;
+    --hero-gradient-end: 214 35% 30%;
   }
 
   .dark {
@@ -66,7 +69,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Libre Franklin', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
   }
 }
