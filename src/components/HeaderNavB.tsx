@@ -30,7 +30,7 @@ const HeaderNavB = () => {
             onClick={(e) => { e.preventDefault(); document.getElementById("form")?.scrollIntoView({ behavior: "smooth" }); }}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-accent text-accent-foreground px-4 py-2 text-xs font-bold flex items-center gap-1.5 rounded-full hover:brightness-105 transition-all whitespace-nowrap"
+            className="bg-accent text-accent-foreground px-4 py-2 mr-1 sm:mr-2 text-xs font-bold flex items-center gap-1.5 rounded-full hover:brightness-105 transition-all whitespace-nowrap"
           >
             Free Claim Assessment <ArrowRight className="w-3.5 h-3.5" />
           </motion.a>
