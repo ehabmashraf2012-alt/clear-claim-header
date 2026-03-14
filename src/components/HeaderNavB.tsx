@@ -1,6 +1,7 @@
 import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import heroTexture from "@/assets/hero-texture.jpg";
 
 const usps = [
   { icon: Award, text: "★ 4.9/5 from 150+ Google reviews" },
