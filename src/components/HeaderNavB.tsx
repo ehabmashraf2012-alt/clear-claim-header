@@ -10,9 +10,8 @@ const HeaderNavB = () => {
     >
       {/* Slim top bar */}
       <div className="bg-primary text-primary-foreground/60 text-xs py-1.5 px-4">
-        <div className="container mx-auto max-w-6xl flex items-center justify-between">
-          <span>The UK's only specialist will &amp; inheritance dispute firm</span>
-          <span className="hidden sm:inline">★ 4.9/5 from 150+ reviews</span>
+        <div className="container mx-auto max-w-6xl flex items-center justify-center">
+          <span>★ 4.9/5 from 150+ Google reviews</span>
         </div>
       </div>
 

@@ -12,18 +12,18 @@ const CookieBanner = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="bg-primary text-primary-foreground px-4 py-2 text-xs"
+          className="bg-foreground/90 text-background px-4 py-2.5 text-xs backdrop-blur-sm"
         >
-          <div className="container mx-auto max-w-6xl flex items-center justify-between gap-3">
-            <p className="opacity-80">
-              Cookies are used to enhance your experience. By using this website you agree with our{" "}
-              <a href="#" className="underline font-medium">cookie policy</a>.
+          <div className="container mx-auto max-w-6xl flex items-center justify-between gap-4">
+            <p className="opacity-90">
+              We use cookies to improve your experience.{" "}
+              <a href="#" className="underline">Learn more</a>
             </p>
             <button
               onClick={() => setVisible(false)}
-              className="shrink-0 border border-primary-foreground/40 bg-background text-foreground px-3 py-1 text-xs font-medium hover:opacity-80 transition-opacity"
+              className="shrink-0 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold hover:brightness-105 transition-all"
             >
-              I agree
+              Got it
             </button>
           </div>
         </motion.div>
