@@ -1,6 +1,7 @@
 import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import heroTexture from "@/assets/hero-texture.jpg";
 
 const usps = [
   { icon: Award, text: "★ 4.9/5 from 150+ Google reviews" },
@@ -73,8 +74,9 @@ const HeaderNavB = () => {
       </div>
 
       {/* Dark hero banner — HCR-inspired */}
-      <div className="bg-primary text-primary-foreground px-4 py-12 md:py-20">
-        <div className="container mx-auto max-w-6xl">
+      <div className="relative bg-primary text-primary-foreground px-4 py-12 md:py-20 overflow-hidden">
+        <img src={heroTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
+        <div className="container mx-auto max-w-6xl relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
