@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(true);
@@ -13,16 +12,16 @@ const CookieBanner = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="bg-cookie text-cookie-foreground px-4 py-2 text-xs backdrop-blur-sm"
+          className="bg-primary text-primary-foreground px-4 py-2 text-xs"
         >
-          <div className="container mx-auto flex items-center justify-between gap-3">
-            <p className="opacity-90">
-              Cookies are used to enhance your experience. By using this website you agree with our{" "}
-              <a href="#" className="underline font-medium hover:opacity-100 transition-opacity">cookie policy</a>.
+          <div className="container mx-auto max-w-6xl flex items-center justify-between gap-3">
+            <p className="opacity-80">
+              We use cookies to give you the best online experience. By using this website you agree with our{" "}
+              <a href="#" className="underline font-medium">cookie policy</a>
             </p>
             <button
               onClick={() => setVisible(false)}
-              className="shrink-0 border border-cookie-foreground/30 bg-cookie-foreground/10 text-cookie-foreground px-3 py-1 text-xs font-medium hover:bg-cookie-foreground/20 transition-all rounded-sm backdrop-blur-sm"
+              className="shrink-0 border border-primary-foreground/40 bg-background text-foreground px-3 py-1 text-xs font-medium hover:opacity-80 transition-opacity"
             >
               I agree
             </button>

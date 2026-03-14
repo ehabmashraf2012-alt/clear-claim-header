@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const GoogleIcon = () => (
@@ -10,117 +10,191 @@ const GoogleIcon = () => (
   </svg>
 );
 
+const UKFlagIcon = () => (
+  <svg width="24" height="16" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#012169"/>
+    <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" strokeWidth="6"/>
+    <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" strokeWidth="4" clipPath="url(#t)"/>
+    <path d="M30,0 V40 M0,20 H60" stroke="#fff" strokeWidth="10"/>
+    <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" strokeWidth="6"/>
+  </svg>
+);
+
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 15 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: 0.3 + i * 0.1, ease: "easeOut" as const },
+    transition: { duration: 0.45, delay: 0.15 + i * 0.08, ease: "easeOut" as const },
   }),
 };
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-primary overflow-hidden">
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-        backgroundSize: '24px 24px',
-      }} />
-      
-      <div className="relative container mx-auto max-w-3xl px-6 py-8 md:py-12">
-        {/* Headline */}
-        <motion.h1
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="font-display text-2xl md:text-4xl font-bold text-primary-foreground text-center leading-tight mb-3"
-        >
-          Will &amp; inheritance dispute{" "}
-          <br className="hidden sm:inline" />
-          specialists.{" "}
-          <span className="text-accent italic">It's all we do!</span>
-        </motion.h1>
-
-        {/* Subheadline */}
-        <motion.p
-          custom={1}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="text-sm md:text-base font-medium text-primary-foreground/80 text-center mb-7"
-        >
-          Resolving sensitive disputes with care and integrity.
-        </motion.p>
-
-        {/* Divider */}
-        <motion.div
-          custom={2}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="w-16 h-0.5 bg-accent mx-auto mb-7"
-        />
-
-        {/* Steps */}
-        <ol className="space-y-3 mb-7 max-w-sm mx-auto">
-          {[
-            "Complete our free claim assessment",
-            "Our expert team review your case",
-            "Free initial guidance from our experts",
-          ].map((step, i) => (
-            <motion.li
-              key={i}
-              custom={3 + i}
+    <section className="bg-background px-4 md:px-8 py-8 md:py-12">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+          {/* Left Content */}
+          <div>
+            <motion.h1
+              custom={0}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="flex items-center gap-3 text-sm md:text-base text-primary-foreground/90"
+              className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
             >
-              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent text-secondary-foreground flex items-center justify-center text-sm font-bold shadow-lg shadow-accent/20">
-                {i + 1}
-              </span>
-              {step}
-            </motion.li>
-          ))}
-        </ol>
+              Involved in a will dispute or inheritance claim?
+            </motion.h1>
 
-        {/* Google Reviews */}
-        <motion.a
-          custom={6}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          href="#reviews"
-          className="flex flex-col items-center gap-1.5 mb-7 hover:scale-[1.02] transition-transform"
-        >
-          <div className="flex items-center gap-2">
-            <GoogleIcon />
-            <span className="text-star text-xl tracking-wider">★★★★★</span>
+            <motion.div
+              custom={1}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="inline-block border border-border rounded-full px-5 py-2 mb-5"
+            >
+              <p className="text-sm text-foreground">
+                Inheritance dispute specialists. <strong>It's all we do.</strong>
+              </p>
+            </motion.div>
+
+            <motion.h2
+              custom={2}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              className="text-xl md:text-2xl font-bold text-foreground leading-snug mb-5"
+            >
+              Your resolution to a difficult<br />and sensitive dispute.
+            </motion.h2>
+
+            <ol className="space-y-4 mb-7">
+              {[
+                "Complete our free claim assessment",
+                "Our expert team review your case",
+                "Free initial guidance from our experts",
+              ].map((step, i) => (
+                <motion.li
+                  key={i}
+                  custom={3 + i}
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="flex items-center gap-3 text-base md:text-lg font-medium text-foreground"
+                >
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center text-sm font-bold">
+                    {i + 1}
+                  </span>
+                  {step}
+                </motion.li>
+              ))}
+            </ol>
+
+            <motion.a
+              custom={6}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              href="#reviews"
+              className="inline-flex flex-col gap-1"
+            >
+              <div className="flex items-center gap-2">
+                <GoogleIcon />
+                <span className="text-star text-xl tracking-wider">★★★★★</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Rated <strong className="text-foreground">4.9/5</strong> from <strong className="text-foreground">150+</strong> Google Reviews
+              </p>
+            </motion.a>
           </div>
-          <p className="text-sm text-primary-foreground/70">
-            Rated <strong className="text-primary-foreground">4.9/5</strong> from <strong className="text-primary-foreground">150+</strong> Google Reviews
-          </p>
-        </motion.a>
 
-        {/* CTA */}
-        <motion.div
-          custom={7}
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          className="flex justify-center"
-        >
+          {/* Right Form */}
+          <motion.div
+            custom={1}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="bg-muted rounded-lg p-6 md:p-8 shadow-sm"
+          >
+            <p className="text-center text-sm text-foreground mb-6 leading-relaxed">
+              Brought to you by IDR Law – the only law firm in the UK specialising solely in dealing with disputes over wills, estates and trusts.
+            </p>
+
+            {/* Progress dots */}
+            <div className="flex justify-center gap-1.5 mb-6">
+              {Array.from({ length: 7 }).map((_, i) => (
+                <div key={i} className="w-8 h-1.5 rounded-full bg-border" />
+              ))}
+            </div>
+
+            {/* Form fields */}
+            <div className="space-y-4 mb-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                readOnly
+              />
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  readOnly
+                />
+              </div>
+              <div className="relative">
+                <div className="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                  <UKFlagIcon />
+                  <span className="text-xs text-muted-foreground">▼</span>
+                </div>
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  className="w-full pl-16 pr-4 py-3 rounded-lg border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                  readOnly
+                />
+              </div>
+            </div>
+
+            <label className="flex items-center gap-2 text-sm text-foreground mb-6">
+              <input type="checkbox" className="w-4 h-4 rounded border-border" readOnly />
+              I agree with the{" "}
+              <a href="#" className="text-primary underline font-medium">terms and conditions</a>.
+            </label>
+
+            {/* Back arrow placeholder */}
+            <div className="flex justify-start">
+              <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground">
+                ←
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom sticky bar */}
+      <motion.div
+        custom={8}
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        className="fixed bottom-0 left-0 right-0 bg-background border-t border-border px-4 py-3 z-50"
+      >
+        <div className="container mx-auto max-w-6xl flex items-center justify-between">
+          <p className="text-sm md:text-base font-medium text-foreground hidden sm:block">
+            Involved in a will dispute or inheritance claim?
+          </p>
           <a
             href="#form"
-            className="group bg-accent text-secondary-foreground px-8 py-3.5 font-bold text-base flex items-center gap-2 hover:shadow-xl hover:shadow-accent/30 hover:scale-[1.02] transition-all duration-300 rounded-sm"
+            className="group bg-accent text-accent-foreground px-6 py-2.5 font-semibold text-sm flex items-center gap-2 rounded-full hover:opacity-90 transition-opacity ml-auto"
           >
-            Fast Claim Assessment 
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Fast Claim Assessment
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
