@@ -36,14 +36,6 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Content */}
           <div>
-            <motion.p
-              custom={0}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              className="text-base font-semibold text-foreground mb-5"
-            >
-            </motion.p>
 
             <motion.p
               custom={1}
