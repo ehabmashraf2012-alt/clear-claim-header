@@ -8,14 +8,6 @@ const HeaderNavB = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Slim top bar */}
-      <div className="bg-accent/20 px-4 py-2">
-        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2 text-xs text-foreground/70">
-          <span>Have questions?</span>
-          <a href="#faqs" className="font-semibold text-primary hover:underline">View our FAQs →</a>
-        </div>
-      </div>
-
       {/* Main nav */}
       <div className="bg-background border-b border-border px-4 py-4">
         <div className="container mx-auto max-w-6xl flex items-center justify-between gap-6">
@@ -42,6 +34,14 @@ const HeaderNavB = () => {
           >
             Free Claim Assessment <ArrowRight className="w-3.5 h-3.5" />
           </motion.a>
+        </div>
+      </div>
+
+      {/* FAQ bar */}
+      <div className="bg-accent/20 px-4 py-2">
+        <div className="container mx-auto max-w-6xl flex items-center justify-center gap-2 text-xs text-foreground/70">
+          <span>Have questions?</span>
+          <a href="#faqs" className="font-semibold text-primary hover:underline">View our FAQs →</a>
         </div>
       </div>
 
