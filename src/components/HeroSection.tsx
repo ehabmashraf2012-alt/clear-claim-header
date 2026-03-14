@@ -29,14 +29,25 @@ const fadeUp = {
   }),
 };
 
-const HeroSection = () => {
+const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
   return (
     <section className="bg-background px-4 md:px-8 py-8 md:py-12">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Content */}
           <div>
-
+            {variant === "A" && (
+              <motion.h1
+                custom={0}
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
+              >
+                Will &amp; inheritance dispute specialists.{" "}
+                <span className="text-accent italic">It's all we do!</span>
+              </motion.h1>
+            )}
             <motion.p
               custom={1}
               variants={fadeUp}
