@@ -92,6 +92,7 @@ const HeaderNavB = () => {
             className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4 max-w-2xl"
           >
             Will &amp; inheritance dispute specialists.{" "}
+            <br className="block md:hidden" />
             <span className="text-accent italic">It's all we do.</span>
           </motion.h1>
           <motion.p
