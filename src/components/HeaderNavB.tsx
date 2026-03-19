@@ -83,7 +83,7 @@ const HeaderNavB = () => {
             transition={{ delay: 0.1 }}
             className="text-accent text-sm font-semibold tracking-widest uppercase mb-4"
           >
-            No Win, No Fee
+            No Legal Fees
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 15 }}

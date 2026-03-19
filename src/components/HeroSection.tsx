@@ -116,7 +116,7 @@ const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
                 <span className="text-star text-xl tracking-wider">★★★★★</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Rated <strong className="text-foreground">4.9/5</strong> from <strong className="text-foreground">150+</strong> Google Reviews
+                Rated <strong className="text-foreground">4.9/5</strong> from <strong className="text-foreground">195+</strong> Google Reviews
               </p>
             </motion.a>
           </div>
