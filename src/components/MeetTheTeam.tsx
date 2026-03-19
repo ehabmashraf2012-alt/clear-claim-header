@@ -59,7 +59,7 @@ const MeetTheTeam = () => {
             Meet the team
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our dedicated team of will and inheritance dispute specialists work collaboratively to provide you with the best possible outcome. Every member is an expert in this field — it's all we do.
+            Over the years we have handled over 20,000 probate disputes, and our team brings over 300 years of combined legal experience to help you navigate these complicated situations with clarity and confidence.
           </p>
         </motion.div>
 
