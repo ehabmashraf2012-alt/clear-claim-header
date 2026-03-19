@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import heroTexture from "@/assets/hero-texture.jpg";
 
 const usps = [
-  { icon: Award, text: "★ 4.9/5 from 150+ Google reviews" },
-  { icon: Shield, text: "No Win, No Fee — zero risk to you" },
+  { icon: Award, text: "★ 4.9/5 from 195+ Google reviews" },
+  { icon: Shield, text: "No Legal Fees - Free Claim Assessment" },
   { icon: Clock, text: "Free expert assessment within 24 hours" },
   { icon: Users, text: "30+ specialist will dispute lawyers" },
 ];
