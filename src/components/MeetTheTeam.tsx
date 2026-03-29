@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
-import teamMartin from "@/assets/team-martin.jpg";
-import teamEleanor from "@/assets/team-eleanor.jpg";
-import teamRichard from "@/assets/team-richard.jpg";
-import teamStephen from "@/assets/team-stephen.jpg";
+import teamDaniel from "@/assets/team-daniel.jpg";
+import teamLaura from "@/assets/team-laura.jpg";
+import teamDaniela from "@/assets/team-daniela.jpg";
+import teamStephen from "@/assets/team-stephen-new.jpg";
 
 const team = [
   {
-    name: "Martin Holdsworth",
-    role: "CEO & Founder",
+    name: "Daniel Edwards",
+    role: "Partner",
     qualifications: "LLB (Hons) CTAPS",
-    image: teamMartin,
+    image: teamDaniel,
   },
   {
-    name: "Eleanor Stenson",
-    role: "Partner, Head of People",
-    qualifications: "LLB (Hons) CTAPS",
-    image: teamEleanor,
+    name: "Daniela Parravano",
+    role: "Head of Triage Operations",
+    qualifications: "BA (Hons)",
+    image: teamDaniela,
   },
   {
-    name: "Richard Thomas",
-    role: "Partner, Head of Legal Ops",
-    qualifications: "BA (Hons) CTAPS",
-    image: teamRichard,
+    name: "Laura Read",
+    role: "Triage Paralegal",
+    qualifications: "BA (Hons)",
+    image: teamLaura,
   },
   {
     name: "Stephen Lawson",
-    role: "Partner, Head of IDRU Academy",
+    role: "Head of IDRU Academy",
     qualifications: "LLB (Hons) CTAPS TEP",
     image: teamStephen,
   },
