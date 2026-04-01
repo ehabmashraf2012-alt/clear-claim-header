@@ -99,7 +99,7 @@ const SituationsSection = () => {
                 <div className="flex items-center justify-between px-6 md:px-8 py-5 md:py-6">
                   <h3
                     className={`font-display text-xl md:text-2xl font-bold transition-colors ${
-                      isOpen ? "text-primary-foreground" : "text-foreground"
+                      isOpen ? "text-primary-foreground" : "text-accent"
                     }`}
                   >
                     {cat.title}
