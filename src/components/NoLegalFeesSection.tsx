@@ -90,7 +90,7 @@ const NoLegalFeesSection = () => {
               />
             </div>
             {/* Decorative accent corner */}
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-4 border-accent/30 rounded-2xl -z-10 hidden lg:block" />
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-4 border-accent/30 rounded-2xl -z-10 hidden md:block" />
           </motion.div>
         </div>
       </div>
