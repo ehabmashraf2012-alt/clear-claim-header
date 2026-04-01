@@ -25,25 +25,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social icons */}
-          <div className="flex items-center gap-4">
-            {[
-              { icon: Linkedin, href: "https://www.linkedin.com/company/idr-law", label: "LinkedIn" },
-              { icon: Twitter, href: "https://twitter.com/idrlaw", label: "Twitter" },
-              { icon: Facebook, href: "https://www.facebook.com/idrlaw", label: "Facebook" },
-            ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-9 h-9 rounded border border-primary-foreground/20 flex items-center justify-center hover:border-accent hover:text-accent transition-colors"
-              >
-                <Icon className="w-4 h-4" />
-              </a>
-            ))}
-          </div>
         </div>
 
         {/* Divider */}
