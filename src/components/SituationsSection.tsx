@@ -99,10 +99,10 @@ const SituationsSection = () => {
                 <div className="flex items-center justify-between px-6 md:px-8 py-5 md:py-6">
                   <h3
                     className={`font-display text-xl md:text-2xl font-bold transition-colors ${
-                      isOpen ? "text-primary-foreground" : "text-accent"
+                      isOpen ? "text-primary-foreground" : "text-foreground"
                     }`}
                   >
-                    {cat.title}
+                    {cat.title.replace(/\?$/, "")}<span className="text-accent">?</span>
                   </h3>
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-all duration-300 ${
