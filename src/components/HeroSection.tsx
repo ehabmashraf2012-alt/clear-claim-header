@@ -58,19 +58,6 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Content */}
           <div>
-            {variant === "A" && (
-              <motion.h1
-                custom={0}
-                variants={fadeUp}
-                initial="hidden"
-                animate="visible"
-                className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
-              >
-                Will &amp; inheritance dispute specialists.{" "}
-                <br className="block md:hidden" />
-                <span className="text-accent italic">It's all we do!</span>
-              </motion.h1>
-            )}
             <motion.p
               custom={1}
               variants={fadeUp}
