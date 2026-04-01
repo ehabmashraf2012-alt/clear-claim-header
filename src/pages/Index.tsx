@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import SituationsSection from "@/components/SituationsSection";
 import NoLegalFeesSection from "@/components/NoLegalFeesSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [variant, setVariant] = useState<"A" | "B">(
