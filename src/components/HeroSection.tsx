@@ -31,12 +31,12 @@ const fadeUp = {
   }),
 };
 
-const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
+const HeroSection = () => {
   const isMobile = useIsMobile();
-  const [showStickyBar, setShowStickyBar] = useState(variant === "A");
+  const [showStickyBar, setShowStickyBar] = useState(false);
 
   useEffect(() => {
-    if (variant !== "B" || !isMobile) {
+    if (!isMobile) {
       setShowStickyBar(true);
       return;
     }
@@ -50,7 +50,7 @@ const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [variant, isMobile]);
+  }, [isMobile]);
 
   return (
     <section className="bg-background px-4 md:px-8 py-8 md:py-12">
@@ -58,19 +58,6 @@ const HeroSection = ({ variant = "A" }: { variant?: "A" | "B" }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Content */}
           <div>
-            {variant === "A" && (
-              <motion.h1
-                custom={0}
-                variants={fadeUp}
-                initial="hidden"
-                animate="visible"
-                className="font-display text-3xl md:text-[2.6rem] font-bold text-foreground leading-tight mb-4"
-              >
-                Will &amp; inheritance dispute specialists.{" "}
-                <br className="block md:hidden" />
-                <span className="text-accent italic">It's all we do!</span>
-              </motion.h1>
-            )}
             <motion.p
               custom={1}
               variants={fadeUp}
