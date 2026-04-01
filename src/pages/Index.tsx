@@ -29,6 +29,7 @@ const Index = () => {
       <HeroSection variant={variant} />
       <MeetTheTeam />
       <SituationsSection />
+      <NoLegalFeesSection />
     </div>
   );
 };
