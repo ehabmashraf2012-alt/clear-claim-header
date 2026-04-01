@@ -26,6 +26,7 @@ const Index = () => {
       <ABTestHeader />
       <AnnouncementBar />
       <HeroSection variant={variant} />
+      <SituationsSection />
       <MeetTheTeam />
     </div>
   );
