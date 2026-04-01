@@ -4,6 +4,7 @@ import ABTestHeader from "@/components/ABTestHeader";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import SituationsSection from "@/components/SituationsSection";
 
 const Index = () => {
   const [variant, setVariant] = useState<"A" | "B">(
