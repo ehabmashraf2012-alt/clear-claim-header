@@ -16,7 +16,7 @@ const highlights = [
   {
     icon: HandCoins,
     title: "No Win, No Fee available",
-    text: "In eligible cases we offer No Win No Fee funding — dependent on the type of inheritance dispute involved.",
+    text: "In eligible cases we offer No Win No Fee funding, dependent on the type of inheritance dispute involved.",
   },
 ];
 
