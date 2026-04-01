@@ -14,7 +14,7 @@ const categories = [
     ],
   },
   {
-    title: "Unfair or broken inheritance promises",
+    title: "Unfair or broken inheritance promises?",
     items: [
       "You were left out of the will or received less than expected",
       "You were promised inheritance that hasn't materialised",
