@@ -29,13 +29,11 @@ const Footer = () => {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-6 flex-wrap">
-              <img src={sraBadge} alt="Solicitors Regulation Authority" className="h-14 object-contain" />
-              <img src={cyberEssentials} alt="Cyber Essentials Certified" className="h-14 object-contain" />
-              <img src={legal500} alt="Legal 500" className="h-10 object-contain" />
-            </div>
-            <img src={actapsLogo} alt="ACTAPS" className="h-10 object-contain self-start" />
+          <div className="flex items-center gap-6 flex-wrap">
+            <img src={sraBadge} alt="Solicitors Regulation Authority" className="h-14 object-contain" />
+            <img src={actapsLogo} alt="ACTAPS" className="h-10 object-contain" />
+            <img src={cyberEssentials} alt="Cyber Essentials Certified" className="h-14 object-contain" />
+            <img src={legal500} alt="Legal 500" className="h-10 object-contain" />
           </div>
         </div>
 
