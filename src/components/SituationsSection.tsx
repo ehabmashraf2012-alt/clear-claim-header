@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const categories = [
   {
-    title: "Problems with the will",
+    title: "Problems with the will?",
     items: [
       "There is no will and I am not sure what happens next",
       "I think there is a will, but I cannot find it or it is being withheld from me",
