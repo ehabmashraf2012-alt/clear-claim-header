@@ -1,5 +1,9 @@
-const Footer = () => {
+import sraBadge from "@/assets/sra-badge.png";
+import actapsLogo from "@/assets/actaps-small.webp";
+import cyberEssentials from "@/assets/cyber-essentials.webp";
+import legal500 from "@/assets/legal-500.webp";
 
+const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground px-4 py-12 md:py-16">
       <div className="container mx-auto max-w-6xl">
@@ -24,6 +28,13 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Trust badges */}
+          <div className="flex items-center gap-6 flex-wrap">
+            <img src={sraBadge} alt="Solicitors Regulation Authority" className="h-14 object-contain" />
+            <img src={actapsLogo} alt="ACTAPS" className="h-10 object-contain" />
+            <img src={cyberEssentials} alt="Cyber Essentials Certified" className="h-14 object-contain" />
+            <img src={legal500} alt="Legal 500" className="h-10 object-contain" />
+          </div>
         </div>
 
         {/* Divider */}
