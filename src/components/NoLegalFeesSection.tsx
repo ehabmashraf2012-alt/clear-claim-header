@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, HandCoins, MessageSquareText } from "lucide-react";
-import teamDaniel from "@/assets/team-daniel.jpg";
+import costsImage from "@/assets/costs-consultation.webp";
 
 const highlights = [
   {
