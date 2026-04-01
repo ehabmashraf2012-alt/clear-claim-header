@@ -1,5 +1,5 @@
 import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
-import idrLawLogo from "@/assets/idr-law-logo.png";
+import idrLawLogo from "@/assets/idr-law-logo.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import heroTexture from "@/assets/hero-texture.jpg";
