@@ -24,7 +24,7 @@ const NoLegalFeesSection = () => {
   return (
     <section className="bg-card px-4 py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left — content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
