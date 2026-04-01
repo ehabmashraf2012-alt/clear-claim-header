@@ -30,17 +30,7 @@ const HeaderNavB = () => {
       <div className="bg-background border-b border-border px-1 sm:px-3 py-4">
         <div className="container mx-auto max-w-6xl flex items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-0.5">
-            {["I", "D", "R"].map((letter) => (
-              <span
-                key={letter}
-                className="border-2 border-primary px-1.5 py-0.5 text-sm font-bold text-primary"
-              >
-                {letter}
-              </span>
-            ))}
-            <span className="ml-2 text-lg font-light tracking-[0.25em] text-foreground">Law</span>
-          </div>
+          <img src={idrLawLogo} alt="IDR Law" className="h-8 md:h-10 w-auto" />
 
           {/* CTA */}
           <motion.a
