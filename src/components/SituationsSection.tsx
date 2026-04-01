@@ -1,12 +1,10 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 const categories = [
   {
-    number: "01",
     title: "Problems with the will",
-    subtitle: "When something doesn't feel right",
     items: [
       "There is no will and I am not sure what happens next",
       "I think there is a will, but I cannot find it or it is being withheld from me",
@@ -16,9 +14,7 @@ const categories = [
     ],
   },
   {
-    number: "02",
     title: "Unfair or broken inheritance promises",
-    subtitle: "When promises weren't kept",
     items: [
       "You were left out of the will or received less than expected",
       "You were promised inheritance that hasn't materialised",
@@ -26,9 +22,7 @@ const categories = [
     ],
   },
   {
-    number: "03",
     title: "Estate administration issues",
-    subtitle: "When the process breaks down",
     items: [
       "You are unhappy with the current handling of the estate administration",
       "You do not believe all the deceased person's assets have been properly accounted for",
@@ -38,34 +32,33 @@ const categories = [
   },
 ];
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" as const },
+  }),
+};
+
 const SituationsSection = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [hoveredPill, setHoveredPill] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-primary px-4 md:px-8 py-16 md:py-24 overflow-hidden">
+    <section className="bg-background px-4 md:px-8 py-16 md:py-24">
       <div className="container mx-auto max-w-6xl">
-        {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-accent text-sm font-semibold tracking-widest uppercase mb-4"
-            >
-              How we help
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="font-display text-3xl md:text-5xl font-bold text-primary-foreground leading-tight max-w-lg"
-            >
-              Do any of these sound familiar?
-            </motion.h2>
-          </div>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight max-w-xl"
+          >
+            If you find yourself in any of these situations,{" "}
+            <span className="text-accent italic">we may be able to help.</span>
+          </motion.h2>
           <motion.a
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -76,124 +69,85 @@ const SituationsSection = () => {
               e.preventDefault();
               document.getElementById("form")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group shrink-0 bg-accent text-accent-foreground px-6 py-3 font-bold text-sm flex items-center gap-2 rounded-full hover:brightness-105 transition-all self-start"
+            className="group shrink-0 bg-primary text-primary-foreground px-6 py-3 font-semibold text-sm flex items-center gap-2 rounded-full hover:opacity-90 transition-opacity self-start md:self-auto"
           >
             Free claim assessment
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </motion.a>
         </div>
 
-        {/* Category selector — large typography tabs */}
-        <div className="flex flex-col md:flex-row gap-2 md:gap-0 mb-10 md:mb-14 border-b border-primary-foreground/10">
-          {categories.map((cat, i) => (
-            <motion.button
-              key={cat.number}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              onClick={() => setActiveCategory(i)}
-              className={`group relative flex items-center gap-3 md:gap-4 px-5 md:px-6 py-4 md:py-5 text-left transition-all duration-300 md:flex-1 rounded-t-lg ${
-                activeCategory === i
-                  ? "bg-primary-foreground/10"
-                  : "hover:bg-primary-foreground/5"
-              }`}
-            >
-              <span
-                className={`font-display text-2xl md:text-3xl font-bold transition-colors duration-300 ${
-                  activeCategory === i ? "text-accent" : "text-primary-foreground/20"
+        {/* Interactive category cards */}
+        <div className="space-y-4">
+          {categories.map((cat, i) => {
+            const isOpen = expandedIndex === i;
+            return (
+              <motion.div
+                key={cat.title}
+                custom={i}
+                variants={fadeIn}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className={`rounded-xl border transition-all duration-300 cursor-pointer overflow-hidden ${
+                  isOpen
+                    ? "bg-primary border-primary shadow-lg"
+                    : "bg-card border-border hover:border-accent/50 hover:shadow-md"
                 }`}
+                onClick={() => setExpandedIndex(isOpen ? null : i)}
               >
-                {cat.number}
-              </span>
-              <div>
-                <span
-                  className={`block text-sm md:text-base font-semibold transition-colors duration-300 ${
-                    activeCategory === i ? "text-primary-foreground" : "text-primary-foreground/50"
-                  }`}
-                >
-                  {cat.title}
-                </span>
-                <span className="block text-xs text-primary-foreground/30 mt-0.5 hidden md:block">
-                  {cat.subtitle}
-                </span>
-              </div>
-              {/* Active indicator */}
-              {activeCategory === i && (
+                {/* Category header */}
+                <div className="flex items-center justify-between px-6 md:px-8 py-5 md:py-6">
+                  <h3
+                    className={`font-display text-xl md:text-2xl font-bold transition-colors ${
+                      isOpen ? "text-primary-foreground" : "text-foreground"
+                    }`}
+                  >
+                    {cat.title}
+                  </h3>
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-all duration-300 ${
+                      isOpen
+                        ? "bg-accent text-accent-foreground rotate-45"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    +
+                  </div>
+                </div>
+
+                {/* Expandable content */}
                 <motion.div
-                  layoutId="activeTab"
-                  className="absolute bottom-0 left-4 right-4 h-0.5 bg-accent rounded-full"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
-            </motion.button>
-          ))}
+                  initial={false}
+                  animate={{
+                    height: isOpen ? "auto" : 0,
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-6 md:px-8 pb-6 md:pb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                      {cat.items.map((item, j) => (
+                        <motion.div
+                          key={j}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={isOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                          transition={{ delay: j * 0.06, duration: 0.3 }}
+                          className="flex items-start gap-3"
+                        >
+                          <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                          <span className="text-primary-foreground/85 text-sm md:text-base leading-relaxed">
+                            {item}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </div>
-
-        {/* Situation pills — the key differentiator */}
-        <motion.div
-          key={activeCategory}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="flex flex-wrap gap-3 md:gap-4"
-        >
-          {categories[activeCategory].items.map((item, j) => (
-            <motion.div
-              key={j}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: j * 0.07, duration: 0.3 }}
-              onMouseEnter={() => setHoveredPill(j)}
-              onMouseLeave={() => setHoveredPill(null)}
-              className={`relative px-5 py-4 md:px-6 md:py-5 rounded-2xl border cursor-default transition-all duration-300 max-w-md ${
-                hoveredPill === j
-                  ? "bg-accent/15 border-accent/40 scale-[1.02] shadow-lg shadow-accent/10"
-                  : "bg-primary-foreground/5 border-primary-foreground/10 hover:border-primary-foreground/20"
-              }`}
-            >
-              <div className="flex items-start gap-3">
-                <span
-                  className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mt-0.5 transition-colors duration-300 ${
-                    hoveredPill === j
-                      ? "bg-accent text-accent-foreground"
-                      : "bg-primary-foreground/10 text-primary-foreground/40"
-                  }`}
-                >
-                  ✓
-                </span>
-                <p
-                  className={`text-sm md:text-base leading-relaxed transition-colors duration-300 ${
-                    hoveredPill === j ? "text-primary-foreground" : "text-primary-foreground/70"
-                  }`}
-                >
-                  {item}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Bottom prompt */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-primary-foreground/40 text-sm mt-12 md:mt-16 text-center"
-        >
-          Not sure if your situation applies?{" "}
-          <a
-            href="#form"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("form")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-accent font-semibold hover:underline"
-          >
-            Get in touch — we'll let you know.
-          </a>
-        </motion.p>
       </div>
     </section>
   );
