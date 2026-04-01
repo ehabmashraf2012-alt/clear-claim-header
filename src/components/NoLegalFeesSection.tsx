@@ -83,7 +83,7 @@ const NoLegalFeesSection = () => {
           >
             <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-h-[520px]">
               <img
-                src={teamDaniel}
+                src={costsImage}
                 alt="Daniel Edwards — Partner"
                 className="w-full h-full object-cover"
                 loading="lazy"
