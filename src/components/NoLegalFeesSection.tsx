@@ -6,7 +6,7 @@ const highlights = [
   {
     icon: ShieldCheck,
     title: "Free triage review",
-    text: "We assess your case at no cost — our expert team will review the details and advise whether you have a viable claim.",
+    text: "We assess your case at no cost. Our expert team will review the details and advise whether you have a viable claim.",
   },
   {
     icon: MessageSquareText,
@@ -16,7 +16,7 @@ const highlights = [
   {
     icon: HandCoins,
     title: "No Win, No Fee available",
-    text: "In eligible cases we offer No Win No Fee funding — dependent on the type of inheritance dispute involved.",
+    text: "In eligible cases we offer No Win No Fee funding, dependent on the type of inheritance dispute involved.",
   },
 ];
 
