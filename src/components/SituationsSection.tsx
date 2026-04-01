@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const categories = [
   {
-    title: "Problems with the will",
+    title: "Problems with the will?",
     items: [
       "There is no will and I am not sure what happens next",
       "I think there is a will, but I cannot find it or it is being withheld from me",
@@ -14,7 +14,7 @@ const categories = [
     ],
   },
   {
-    title: "Unfair or broken inheritance promises",
+    title: "Unfair or broken inheritance promises?",
     items: [
       "You were left out of the will or received less than expected",
       "You were promised inheritance that hasn't materialised",
@@ -22,7 +22,7 @@ const categories = [
     ],
   },
   {
-    title: "Estate administration issues",
+    title: "Estate administration issues?",
     items: [
       "You are unhappy with the current handling of the estate administration",
       "You do not believe all the deceased person's assets have been properly accounted for",
@@ -99,7 +99,7 @@ const SituationsSection = () => {
                 <div className="flex items-center justify-between px-6 md:px-8 py-5 md:py-6">
                   <h3
                     className={`font-display text-xl md:text-2xl font-bold transition-colors ${
-                      isOpen ? "text-primary-foreground" : "text-foreground"
+                      isOpen ? "text-primary-foreground" : "text-accent"
                     }`}
                   >
                     {cat.title}
