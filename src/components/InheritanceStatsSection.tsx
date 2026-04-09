@@ -21,7 +21,7 @@ const InheritanceStatsSection = () => {
         <img
           src={statsBg}
           alt=""
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-right"
           loading="lazy"
         />
         {/* Dark gradient overlay — heavier on the left for readability */}
