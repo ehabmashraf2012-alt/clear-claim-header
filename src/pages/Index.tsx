@@ -8,6 +8,7 @@ import InheritanceStatsSection from "@/components/InheritanceStatsSection";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import NoLegalFeesSection from "@/components/NoLegalFeesSection";
+import FAQPlaceholder from "@/components/FAQPlaceholder";
 import ENPSSection from "@/components/ENPSSection";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ const Index = () => {
       <HowItWorksSection />
       <ENPSSection />
       <NoLegalFeesSection />
+      <FAQPlaceholder />
       <Footer />
     </div>
   );
