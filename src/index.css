@@ -2,42 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
+    /* IDR Law brand palette
+       Navy  #253E5D — hsl(213 43% 25%)
+       Yellow #E9C54A — hsl(46 79% 60%)
+       Grey  #4C4A4A — hsl(0 1% 29%)
+    */
     --background: 40 30% 97%;
-    --foreground: 214 40% 16%;
+    --foreground: 0 1% 29%;
     --card: 0 0% 100%;
-    --card-foreground: 214 40% 16%;
+    --card-foreground: 0 1% 29%;
     --popover: 0 0% 100%;
-    --popover-foreground: 214 40% 16%;
-    --primary: 214 42% 22%;
+    --popover-foreground: 0 1% 29%;
+    --primary: 213 43% 25%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 42 65% 52%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 46 79% 60%;
+    --secondary-foreground: 213 43% 25%;
     --muted: 210 20% 96%;
-    --muted-foreground: 214 15% 45%;
-    --accent: 42 65% 52%;
-    --accent-foreground: 214 40% 16%;
+    --muted-foreground: 0 1% 40%;
+    --accent: 46 79% 60%;
+    --accent-foreground: 213 43% 25%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 214 20% 90%;
     --input: 214 20% 90%;
-    --ring: 214 40% 25%;
+    --ring: 213 43% 25%;
     --radius: 0.5rem;
 
-    --cookie-bg: 214 42% 22%;
-    --cookie-foreground: 42 40% 85%;
-    --announcement-bg: 42 55% 68%;
-    --announcement-foreground: 214 42% 15%;
-    --step-bg: 214 42% 22%;
-    --step-foreground: 42 65% 52%;
-    --cta-bg: 42 65% 52%;
-    --cta-foreground: 0 0% 100%;
-    --star-color: 42 90% 55%;
-    --hero-gradient-start: 214 42% 22%;
-    --hero-gradient-end: 214 35% 30%;
+    --cookie-bg: 213 43% 25%;
+    --cookie-foreground: 46 40% 85%;
+    --announcement-bg: 46 79% 60%;
+    --announcement-foreground: 213 43% 25%;
+    --step-bg: 213 43% 25%;
+    --step-foreground: 46 79% 60%;
+    --cta-bg: 46 79% 60%;
+    --cta-foreground: 213 43% 25%;
+    --star-color: 46 79% 55%;
+    --hero-gradient-start: 213 43% 25%;
+    --hero-gradient-end: 213 40% 32%;
   }
 
   .dark {
@@ -70,13 +75,21 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
   }
 }
 
