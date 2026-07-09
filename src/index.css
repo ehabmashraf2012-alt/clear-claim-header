@@ -8,7 +8,7 @@
   :root {
     /* IDR Law brand palette
        Navy  #253E5D — hsl(213 43% 25%)
-       Yellow #E9C54A — hsl(46 79% 60%)
+       Yellow #E8C855 — hsl(47 76% 62%)
        Grey  #4C4A4A — hsl(0 1% 29%)
     */
     --background: 40 30% 97%;
@@ -19,11 +19,11 @@
     --popover-foreground: 0 1% 29%;
     --primary: 213 43% 25%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 46 79% 60%;
+    --secondary: 47 76% 62%;
     --secondary-foreground: 213 43% 25%;
     --muted: 210 20% 96%;
     --muted-foreground: 0 1% 40%;
-    --accent: 46 79% 60%;
+    --accent: 47 76% 62%;
     --accent-foreground: 213 43% 25%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -34,13 +34,13 @@
 
     --cookie-bg: 213 43% 25%;
     --cookie-foreground: 46 40% 85%;
-    --announcement-bg: 46 79% 60%;
+    --announcement-bg: 47 76% 62%;
     --announcement-foreground: 213 43% 25%;
     --step-bg: 213 43% 25%;
-    --step-foreground: 46 79% 60%;
-    --cta-bg: 46 79% 60%;
+    --step-foreground: 47 76% 62%;
+    --cta-bg: 47 76% 62%;
     --cta-foreground: 213 43% 25%;
-    --star-color: 46 79% 55%;
+    --star-color: 47 76% 62%;
     --hero-gradient-start: 213 43% 25%;
     --hero-gradient-end: 213 40% 32%;
   }
