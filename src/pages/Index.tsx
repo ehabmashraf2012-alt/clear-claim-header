@@ -21,8 +21,9 @@ const Index = () => {
       <AnnouncementBar />
       <HeroSection />
       <MeetTheTeam />
-      <SituationsSection />
-      <ReviewsPlaceholder />
+        <SituationsSection />
+        <CommonQuestionsSection />
+        <ReviewsPlaceholder />
       <InheritanceStatsSection />
       <HowItWorksSection />
       <ENPSSection />
