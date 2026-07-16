@@ -4,6 +4,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import HeroSection from "@/components/HeroSection";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import SituationsSection from "@/components/SituationsSection";
+import CommonQuestionsSection from "@/components/CommonQuestionsSection";
 import InheritanceStatsSection from "@/components/InheritanceStatsSection";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import HowItWorksSection from "@/components/HowItWorksSection";
