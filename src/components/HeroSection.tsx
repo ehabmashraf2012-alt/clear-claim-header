@@ -4,9 +4,18 @@ import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const REVIEWS = [
-  { text: "[Real client review to be supplied]", name: "[Name]" },
-  { text: "[Real client review to be supplied]", name: "[Name]" },
-  { text: "[Real client review to be supplied]", name: "[Name]" },
+  {
+    text: "Many thanks to Daniela and the team for their extremely helpful and sound advice. A suggested heartful letter of appeal achieved the desired outcome.",
+    name: "Pauline Howard",
+  },
+  {
+    text: "I approached this solicitor firm with a complex dispute, and from my very first contact with Louise, I felt genuinely listened to and reassured that I was in the right place to seek help and resolution.",
+    name: "Donna Ali",
+  },
+  {
+    text: "I would highly recommend this firm. Courteous and considerate people.",
+    name: "Julie Camp",
+  },
 ];
 
 const GoogleIcon = () => (

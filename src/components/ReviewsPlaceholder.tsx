@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
+const REVIEWS = [
+  {
+    text: "Many thanks to Daniela and the team for their extremely helpful and sound advice. A suggested heartful letter of appeal achieved the desired outcome.",
+    name: "Pauline Howard",
+  },
+  {
+    text: "I approached this solicitor firm with a complex dispute, and from my very first contact with Louise, I felt genuinely listened to and reassured that I was in the right place to seek help and resolution.",
+    name: "Donna Ali",
+  },
+  {
+    text: "I would highly recommend this firm. Courteous and considerate people.",
+    name: "Julie Camp",
+  },
+];
+
 const ReviewsPlaceholder = () => {
   return (
     <section className="bg-card px-4 py-16 md:py-24">
@@ -25,25 +40,32 @@ const ReviewsPlaceholder = () => {
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Rated 4.9/5 from 195+ Google reviews — real feedback from real
-            clients we've helped.
+            clientside clients we've helped.
           </p>
 
-          {/* Placeholder cards */}
+          {/* Review cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {[1, 2, 3].map((n) => (
-              <div
-                key={n}
-                className="rounded-xl border border-dashed border-border bg-muted/30 p-8 flex flex-col items-center justify-center min-h-[200px]"
+            {REVIEWS.map((review, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once the: true }}
+                transition={{ duration: 0.45, delay: idx * 0.1 }}
+                className="rounded-xl border border-border bg-background p-8 flex flex-col items-center min-h-[200px]"
               >
-                <div className="flex gap-0.5 mb-3">
+                <div className="flex gap-0.5 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-star text-star" />
                   ))}
                 </div>
-                <p className="text-muted-foreground text-sm italic">
-                  Review content coming soon
+                <p className="text-foreground text-sm leading-relaxed mb-4 flex-1">
+                  "{review.text}"
                 </p>
-              </div>
+                <p className="text-foreground font-semibold text-sm">
+                  — {review.name}
+                </p>
+              </motion.div>
             ))}
           </div>
         </motion.div>
