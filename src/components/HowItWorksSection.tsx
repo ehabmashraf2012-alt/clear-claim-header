@@ -1,30 +1,24 @@
 import { motion } from "framer-motion";
-import { ClipboardCheck, Users, Handshake } from "lucide-react";
-import stepAssessment from "@/assets/step-assessment.jpg";
-import stepSpecialist from "@/assets/step-specialist.jpg";
-import stepOutcome from "@/assets/step-outcome.jpg";
+import { ClipboardCheck, MessageSquare, HandHeart } from "lucide-react";
 
 const steps = [
   {
     number: "01",
     icon: ClipboardCheck,
-    image: stepAssessment,
     title: "Claim Assessment",
     description:
       "Our online claim assessment form takes just 5–8 minutes to complete and submit.",
   },
   {
     number: "02",
-    icon: Users,
-    image: stepSpecialist,
+    icon: MessageSquare,
     title: "Speak To Our Specialist Team",
     description:
       "Our trained Triage team will ensure that your claim details are complete before passing to our Legal Team to consider.",
   },
   {
     number: "03",
-    icon: Handshake,
-    image: stepOutcome,
+    icon: HandHeart,
     title: "Receive A Fair Outcome",
     description:
       "Our Legal team will consider your case and give guidance on what your options are. They will contact you if further information is needed.",
@@ -35,7 +29,6 @@ const HowItWorksSection = () => {
   return (
     <section className="bg-background px-4 py-16 md:py-24">
       <div className="container mx-auto max-w-6xl">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,56 +50,37 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        {/* Step connector line (desktop) */}
         <div className="relative">
-          {/* Horizontal connector */}
-          <div className="hidden md:block absolute top-[200px] left-[16.66%] right-[16.66%] h-0.5 bg-accent/30 z-0" />
+          <div className="hidden md:block absolute top-1/2 left-[16.66%] right-[16.66%] h-0.5 bg-accent/30 z-0 -translate-y-1/2" />
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             {steps.map((step, i) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
-                className="relative group"
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
+                whileHover={{ y: -6 }}
+                className="group"
               >
-                <div className="bg-primary rounded-2xl overflow-hidden border-2 border-primary/80 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  {/* Image with step number overlay */}
-                  <div className="relative">
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      className="w-full aspect-[5/4] object-cover"
-                      loading="lazy"
-                      width={800}
-                      height={640}
-                    />
-                    {/* Step number badge */}
-                    <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-display font-bold text-sm shadow-md">
-                      {step.number}
-                    </div>
+                <div className="bg-primary rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full relative">
+                  <div className="absolute top-5 right-5 w-10 h-10 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-display font-bold text-sm shadow-md">
+                    {step.number}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-6 pt-5">
-                    {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-accent/15 flex items-center justify-center mb-4">
-                      <step.icon className="w-6 h-6 text-accent" />
-                    </div>
-
-                    <h3 className="font-display text-lg md:text-xl font-bold text-primary-foreground mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                      {step.description}
-                    </p>
+                  <div className="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mb-6">
+                    <step.icon className="w-8 h-8 text-accent" strokeWidth={2} />
                   </div>
+
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-primary-foreground mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-primary-foreground/70 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
 
-                {/* Arrow between cards (mobile) */}
                 {i < steps.length - 1 && (
                   <div className="md:hidden flex justify-center py-4">
                     <div className="w-0.5 h-8 bg-accent/40 relative">
