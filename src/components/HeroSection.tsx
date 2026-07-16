@@ -112,7 +112,10 @@ const HeroSection = () => {
                 Rated <strong className="text-foreground">4.9/5</strong> from <strong className="text-foreground">195+</strong> Google Reviews
               </p>
             </motion.a>
+
+            <ReviewCarousel />
           </div>
+
 
           {/* Right Form */}
           <motion.div
