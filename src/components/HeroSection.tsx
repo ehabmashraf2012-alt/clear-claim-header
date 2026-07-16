@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+const REVIEWS = [
+  { text: "[Real client review to be supplied]", name: "[Name]" },
+  { text: "[Real client review to be supplied]", name: "[Name]" },
+  { text: "[Real client review to be supplied]", name: "[Name]" },
+];
+
 const GoogleIcon = () => (
   <svg width="22" height="22" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M24.6519 12.8634C24.6519 11.9715 24.5719 11.114 24.4233 10.2907H12.5775V15.1616H19.3465C19.0492 16.7281 18.1574 18.0545 16.8196 18.9463V22.1136H20.9016C23.2799 19.9182 24.6519 16.6938 24.6519 12.8634Z" fill="#4285F4" />
