@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Linkedin, Mail } from "lucide-react";
-import teamRichard from "@/assets/team-richard.jpg";
+import teamRichard from "@/assets/richard-v2.webp.asset.json";
 import teamEleanor from "@/assets/team-eleanor.jpg";
 import teamDaniela from "@/assets/team-daniela.jpg";
 import teamStephen from "@/assets/team-stephen-new.jpg";
