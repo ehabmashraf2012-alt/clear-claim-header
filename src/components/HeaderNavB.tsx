@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
 import idrLawLogo from "@/assets/idr-law-logo.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import heroTexture from "@/assets/hero-texture.jpg";
+import heroTexture from "@/assets/idr-team.webp";
 
 const usps = [
   { icon: Award, text: "★ 4.9/5 from 195+ Google reviews" },
@@ -66,7 +66,8 @@ const HeaderNavB = () => {
 
       {/* Dark hero banner — HCR-inspired */}
       <div className="relative bg-primary text-primary-foreground px-4 py-12 md:py-20 overflow-hidden">
-        <img src={heroTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
+        <img src={heroTexture} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" />
+        <div className="absolute inset-0 bg-primary/80 pointer-events-none" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }}

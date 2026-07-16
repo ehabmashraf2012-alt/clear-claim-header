@@ -1,35 +1,46 @@
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
-import statsBg from "@/assets/stats-bg.jpg";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const stats = [
   {
     figure: "1 in 3",
+    numeric: null,
     description: "people in the UK are relying on an inheritance to fund their future.",
   },
   {
     figure: "38%",
+    numeric: 38,
+    suffix: "%",
     description: "of people would consider disputing a will if they were left out.",
   },
 ];
 
+const CountUp = ({ to, suffix = "" }: { to: number; suffix?: string }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (v) => `${Math.round(v)}${suffix}`);
+
+  useEffect(() => {
+    if (inView) {
+      const controls = animate(count, to, { duration: 1.4, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [inView, to, count]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
+
 const InheritanceStatsSection = () => {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={statsBg}
-          alt=""
-          className="w-full h-full object-cover"
-          style={{ objectPosition: "120% center" }}
-          loading="lazy"
-        />
-        {/* Dark gradient overlay — heavier on the left for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
-      </div>
+    <section className="relative overflow-hidden bg-primary">
+      {/* Subtle brand gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
+      <div className="absolute inset-0 opacity-[0.07] pointer-events-none" style={{
+        backgroundImage: "radial-gradient(circle at 20% 30%, hsl(var(--accent)) 0%, transparent 40%), radial-gradient(circle at 80% 70%, hsl(var(--accent)) 0%, transparent 40%)",
+      }} />
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div className="max-w-2xl space-y-8">
           <motion.h2
@@ -42,19 +53,18 @@ const InheritanceStatsSection = () => {
             Involved in a will dispute or inheritance claim?
           </motion.h2>
 
-          {/* Stat callouts */}
           <div className="flex flex-col sm:flex-row gap-6">
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.figure}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, delay: 0.15 + i * 0.2, ease: "easeOut" }}
                 className="flex-1 border-l-4 border-accent pl-4"
               >
                 <span className="block text-accent font-display text-4xl md:text-5xl font-bold leading-none mb-1">
-                  {stat.figure}
+                  {stat.numeric !== null ? <CountUp to={stat.numeric!} suffix={stat.suffix ?? ""} /> : stat.figure}
                 </span>
                 <p className="text-primary-foreground/80 text-sm md:text-base leading-snug">
                   {stat.description}
@@ -63,35 +73,32 @@ const InheritanceStatsSection = () => {
             ))}
           </div>
 
-          {/* Empathetic line */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
             className="text-primary-foreground/70 text-sm leading-relaxed max-w-lg"
           >
             Inheritance disputes are emotionally complex. We provide clear,
             expert guidance so you can move forward with confidence.
           </motion.p>
 
-          {/* Source citation */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.6 }}
             className="text-primary-foreground/50 text-xs italic"
           >
             Source: Direct Line Group / YouGov, 2023
           </motion.p>
 
-          {/* CTA */}
           <motion.a
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.55 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
             href="#form"
             onClick={(e) => {
               e.preventDefault();
