@@ -37,6 +37,43 @@ const fadeUp = {
   }),
 };
 
+const ReviewCarousel = () => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % REVIEWS.length), 4500);
+    return () => clearInterval(t);
+  }, []);
+  const review = REVIEWS[idx];
+  return (
+    <div className="mt-6 bg-muted/60 rounded-lg p-4 border border-border/50 max-w-sm">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.35 }}
+        >
+          <div className="text-star text-base tracking-wider mb-1.5">★★★★★</div>
+          <p className="text-sm text-foreground leading-snug mb-2">"{review.text}"</p>
+          <p className="text-xs font-semibold text-muted-foreground">— {review.name}</p>
+        </motion.div>
+      </AnimatePresence>
+      <div className="flex gap-1.5 mt-3">
+        {REVIEWS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            aria-label={`Review ${i + 1}`}
+            className={`h-1.5 rounded-full transition-all ${i === idx ? "w-6 bg-accent" : "w-1.5 bg-border"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 const HeroSection = () => {
   const isMobile = useIsMobile();
   const [showStickyBar, setShowStickyBar] = useState(false);
