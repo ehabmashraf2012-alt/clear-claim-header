@@ -158,13 +158,17 @@ const MeetTheTeam = () => {
                   <DialogTitle className="font-display text-2xl md:text-3xl font-bold text-foreground">
                     {selected.name}
                   </DialogTitle>
-                  <p className="text-xs text-muted-foreground">{selected.qualifications}</p>
+                  {selected.qualifications && (
+                    <p className="text-xs text-muted-foreground">{selected.qualifications}</p>
+                  )}
                 </DialogHeader>
 
                 <div className="h-px bg-border my-4" />
 
-                <DialogDescription className="text-sm text-foreground/80 leading-relaxed">
-                  {selected.bio}
+                <DialogDescription className="text-sm text-foreground/80 leading-relaxed space-y-4">
+                  {selected.bio.split("\n\n").map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
                 </DialogDescription>
 
                 <div className="mt-5">
