@@ -29,7 +29,7 @@ const team: Member[] = [
     name: "Eleanor Stenson",
     role: "Partner",
     qualifications: "",
-    image: teamEleanor,
+    image: teamEleanor.url,
     bio: "Eleanor is known for being a calming, client-focused presence in the face of emotionally difficult situations — a quality she brings to every case she leads, alongside particular expertise in high value and complex litigation.\n\nEleanor qualified as a Solicitor in 2009 and has specialised in contentious probate since 2015. She joined IDR Law in 2020 as a Senior Associate and is now a Partner and Head of People, leading on recruitment and internal learning and development. Within the legal team, she provides supervision and tactical lead on cases, and also serves as the firm's Compliance Officer for Legal Practice, responsible for regulatory standards and professional conduct.",
     expertise: ["Contentious probate", "High value litigation", "Compliance", "People development"],
   },
