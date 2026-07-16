@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Linkedin, Mail } from "lucide-react";
-import teamDaniel from "@/assets/team-daniel.jpg";
-import teamLaura from "@/assets/team-laura.jpg";
+import teamRichard from "@/assets/team-richard.jpg";
+import teamEleanor from "@/assets/team-eleanor.jpg";
 import teamDaniela from "@/assets/team-daniela.jpg";
 import teamStephen from "@/assets/team-stephen-new.jpg";
 
@@ -18,36 +18,36 @@ type Member = {
 
 const team: Member[] = [
   {
-    name: "Daniel Edwards",
+    name: "Richard Thomas",
     role: "Partner",
-    qualifications: "LLB (Hons) CTAPS",
-    image: teamDaniel,
-    bio: "[Bio placeholder] Daniel leads the firm with over [X] years of experience in contentious probate and inheritance disputes. He has acted on some of the most complex Inheritance Act and proprietary estoppel claims in the country, and is recognised for his clear, strategic approach to resolving family disputes with empathy and precision.",
-    expertise: ["Inheritance Act claims", "Will validity disputes", "Trust disputes", "Mediation"],
+    qualifications: "",
+    image: teamRichard,
+    bio: "Richard qualified as a solicitor in 2014 and specialised in resolving inheritance disputes from the beginning. He joined IDR Law in 2017 and is now a Partner and Head of Legal Operations.\n\nRichard works on and supervises all manner of inheritance disputes; including probate claims, claims under the Inheritance (Provision for Family and Dependants) Act 1975, administration and trust disputes, and claims involving the removal of trustees and executors.\n\nAs Head of Legal Operations, Richard ensures that all work coming into IDR Law is sympathetically triaged and that cases are properly allocated and managed throughout their duration. Richard prides himself on being able to see the wood for the trees in complex legal disputes. He is solution-focused and approaches all work with a pragmatic and proactive attitude.\n\nWhen instructed as a mediator, Richard brings his years of experience as a practising lawyer into helping parties stuck in inheritance disputes reach settlement out of court.",
+    expertise: ["Inheritance disputes", "Probate claims", "Trust disputes", "Mediation"],
+  },
+  {
+    name: "Eleanor Stenson",
+    role: "Partner",
+    qualifications: "",
+    image: teamEleanor,
+    bio: "Eleanor is known for being a calming, client-focused presence in the face of emotionally difficult situations — a quality she brings to every case she leads, alongside particular expertise in high value and complex litigation.\n\nEleanor qualified as a Solicitor in 2009 and has specialised in contentious probate since 2015. She joined IDR Law in 2020 as a Senior Associate and is now a Partner and Head of People, leading on recruitment and internal learning and development. Within the legal team, she provides supervision and tactical lead on cases, and also serves as the firm's Compliance Officer for Legal Practice, responsible for regulatory standards and professional conduct.",
+    expertise: ["Contentious probate", "High value litigation", "Compliance", "People development"],
   },
   {
     name: "Daniela Parravano",
-    role: "Head of Triage Operations",
+    role: "Head of Triage",
     qualifications: "BA (Hons)",
     image: teamDaniela,
-    bio: "[Bio placeholder] Daniela oversees our triage team, ensuring every enquiry is handled with care and matched to the right specialist. She brings [X] years of client-facing experience and is the first point of contact for many of our clients during what is often a difficult time.",
-    expertise: ["Client intake & assessment", "Case routing", "Operational excellence"],
-  },
-  {
-    name: "Laura Read",
-    role: "Triage Paralegal",
-    qualifications: "BA (Hons)",
-    image: teamLaura,
-    bio: "[Bio placeholder] Laura supports clients from their very first call, gathering the key facts of each dispute and helping people understand their options clearly. Her empathetic, methodical approach makes a real difference at one of the hardest moments in a family's life.",
-    expertise: ["Initial case review", "Client support", "Document gathering"],
+    bio: "Daniela is Head of Triage Operations, having joined IDR Law in September 2021 after a long career in social work, including many years in Child Protection and Safeguarding roles supporting families through difficult and highly emotive circumstances.\n\nThat background has proved a natural fit for contentious probate, where clients are often navigating equally sensitive and challenging family situations. Daniela brings the same empathy, patience and advocacy to her role at IDR Law, ensuring that every client is heard, supported and properly triaged from their very first contact with the firm.\n\nDaniela is proud to work at a firm built around genuinely caring about what happens to its clients — a value she says drew her to the role and continues to shape how she leads the Triage team today.",
+    expertise: ["Client triage", "Safeguarding", "Client support", "Operations"],
   },
   {
     name: "Stephen Lawson",
-    role: "Head of IDRU Academy",
+    role: "Partner",
     qualifications: "LLB (Hons) CTAPS TEP",
     image: teamStephen,
-    bio: "[Bio placeholder] Stephen leads the IDRU Academy, training the next generation of inheritance dispute specialists. With decades of experience and a TEP qualification, he is a recognised authority on contentious trusts and estates and a regular speaker at industry events.",
-    expertise: ["Contentious trusts", "Estate disputes", "Training & development", "Industry speaking"],
+    bio: "Stephen is a specialist Contentious Probate Solicitor with extensive experience acting for both Claimants and Defendants across all aspects of contested wills, trusts and probate — including claims under the Inheritance Act 1975, disputed will validity, deathbed wills, and trust disputes.\n\nRecognised nationally for his expertise, Stephen received the STEP Founders Award in 2023 for his outstanding contribution to the profession. He regularly lectures on inheritance disputes and is known for making complex, sensitive subjects engaging and easy to understand.\n\nStephen is also a respected legal author, having written for The Times and the Law Society Gazette, and co-authored \"Testamentary Capacity\" — bringing that depth of knowledge directly to the clients he represents.",
+    expertise: ["Contentious probate", "Inheritance Act claims", "Will validity", "Trust disputes"],
   },
 ];
 
