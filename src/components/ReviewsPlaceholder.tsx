@@ -40,7 +40,7 @@ const ReviewsPlaceholder = () => {
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Rated 4.9/5 from 195+ Google reviews — real feedback from real
-            clientside clients we've helped.
+            clients we've helped.
           </p>
 
           {/* Review cards */}
@@ -50,7 +50,7 @@ const ReviewsPlaceholder = () => {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once the: true }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.1 }}
                 className="rounded-xl border border-border bg-background p-8 flex flex-col items-center min-h-[200px]"
               >
