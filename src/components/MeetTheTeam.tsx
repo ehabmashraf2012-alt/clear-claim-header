@@ -21,7 +21,7 @@ const team: Member[] = [
     name: "Richard Thomas",
     role: "Partner",
     qualifications: "",
-    image: teamRichard,
+    image: teamRichard.url,
     bio: "Richard qualified as a solicitor in 2014 and specialised in resolving inheritance disputes from the beginning. He joined IDR Law in 2017 and is now a Partner and Head of Legal Operations.\n\nRichard works on and supervises all manner of inheritance disputes; including probate claims, claims under the Inheritance (Provision for Family and Dependants) Act 1975, administration and trust disputes, and claims involving the removal of trustees and executors.\n\nAs Head of Legal Operations, Richard ensures that all work coming into IDR Law is sympathetically triaged and that cases are properly allocated and managed throughout their duration. Richard prides himself on being able to see the wood for the trees in complex legal disputes. He is solution-focused and approaches all work with a pragmatic and proactive attitude.\n\nWhen instructed as a mediator, Richard brings his years of experience as a practising lawyer into helping parties stuck in inheritance disputes reach settlement out of court.",
     expertise: ["Inheritance disputes", "Probate claims", "Trust disputes", "Mediation"],
   },
