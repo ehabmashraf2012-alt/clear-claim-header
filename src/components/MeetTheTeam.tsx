@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Linkedin, Mail } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
+import { Linkedin, Mail, X } from "lucide-react";
 import teamRichard from "@/assets/richard-v2.webp.asset.json";
 import teamEleanor from "@/assets/eleanor-stenson.jpg.asset.json";
 import teamDaniela from "@/assets/team-daniela.jpg";
@@ -138,9 +138,15 @@ const MeetTheTeam = () => {
       </div>
 
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
-        <DialogContent className="max-w-2xl p-0 overflow-hidden gap-0 bg-background">
+        <DialogContent className="max-w-2xl p-0 overflow-hidden gap-0 bg-background max-h-[95vh] sm:max-h-[85vh]">
           {selected && (
-            <div className="max-h-[85vh] overflow-y-auto">
+            <div className="relative max-h-[95vh] sm:max-h-[85vh] overflow-y-auto">
+              <DialogClose
+                aria-label="Close"
+                className="sticky float-right top-3 right-3 z-50 mr-3 mt-3 -mb-11 flex h-11 w-11 items-center justify-center rounded-full bg-background text-foreground shadow-lg ring-1 ring-border hover:bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <X className="h-5 w-5" />
+              </DialogClose>
               <div className="p-6 md:p-8">
                 {/* Top: portrait + name/title */}
                 <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-5 md:gap-6">

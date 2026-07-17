@@ -172,6 +172,9 @@ const HeroSection = () => {
             animate="visible"
             className="bg-muted rounded-lg p-6 md:p-8 shadow-sm scroll-mt-24"
           >
+            <h2 className="font-heading text-xl md:text-2xl font-bold text-primary text-center mb-2">
+              Free Claim Assessment
+            </h2>
             <p className="text-center text-sm text-foreground mb-6 leading-relaxed">
               Brought to you by IDR Law – the only law firm in the UK specialising solely in dealing with disputes over wills, estates and trusts.
             </p>
