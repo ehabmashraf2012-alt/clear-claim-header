@@ -14,6 +14,8 @@ type Member = {
   image: string;
   bio: string;
   expertise: string[];
+  /** CSS object-position for the modal portrait, defaults to "center 20%" */
+  imagePosition?: string;
 };
 
 const team: Member[] = [
