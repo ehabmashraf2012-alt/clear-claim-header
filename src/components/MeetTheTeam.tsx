@@ -138,13 +138,13 @@ const MeetTheTeam = () => {
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent className="max-w-2xl p-0 overflow-hidden gap-0 bg-background">
           {selected && (
-            <div className="grid md:grid-cols-[240px_1fr] md:items-start">
-              {/* Image side — fixed square so tall bios don't stretch/crop the portrait */}
-              <div className="relative aspect-square w-full bg-primary overflow-hidden">
+            <div className="grid md:grid-cols-[240px_1fr]">
+              {/* Image side */}
+              <div className="relative aspect-square md:aspect-auto md:h-full bg-border">
                 <img
                   src={selected.image}
                   alt={selected.name}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-background/0" />
               </div>

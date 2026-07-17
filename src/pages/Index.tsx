@@ -6,7 +6,7 @@ import MeetTheTeam from "@/components/MeetTheTeam";
 import SituationsSection from "@/components/SituationsSection";
 import CommonQuestionsSection from "@/components/CommonQuestionsSection";
 import InheritanceStatsSection from "@/components/InheritanceStatsSection";
-
+import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import NoLegalFeesSection from "@/components/NoLegalFeesSection";
 import FAQPlaceholder from "@/components/FAQPlaceholder";
@@ -21,8 +21,9 @@ const Index = () => {
       <AnnouncementBar />
       <HeroSection />
       <MeetTheTeam />
-      <SituationsSection />
-      <CommonQuestionsSection />
+        <SituationsSection />
+        <CommonQuestionsSection />
+        <ReviewsPlaceholder />
       <InheritanceStatsSection />
       <HowItWorksSection />
       <ENPSSection />
