@@ -20,10 +20,10 @@ const Index = () => {
       <HeaderNavB />
       <AnnouncementBar />
       <HeroSection />
+      <ReviewsPlaceholder />
       <MeetTheTeam />
         <SituationsSection />
         <CommonQuestionsSection />
-        <ReviewsPlaceholder />
       <InheritanceStatsSection />
       <HowItWorksSection />
       <ENPSSection />
