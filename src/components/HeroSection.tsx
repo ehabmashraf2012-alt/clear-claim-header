@@ -1,7 +1,22 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+
+const FULL_REVIEWS = [
+  {
+    text: "Many thanks to Daniela and the team for their extremely helpful and sound advice. A suggested heartful letter of appeal achieved the desired outcome.",
+    name: "Pauline Howard",
+  },
+  {
+    text: "I approached this solicitor firm with a complex dispute, and from my very first contact with Louise, I felt genuinely listened to and reassured that I was in the right place to seek help and resolution.",
+    name: "Donna Ali",
+  },
+  {
+    text: "I would highly recommend this firm. Courteous and considerate people.",
+    name: "Julie Camp",
+  },
+];
 
 const REVIEWS = [
   {
@@ -225,6 +240,57 @@ const HeroSection = () => {
               <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground">
                 ←
               </div>
+            </div>
+          </motion.div>
+
+          {/* Reviews directly under the form */}
+          <motion.div
+            custom={2}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mt-6 md:mt-8"
+          >
+            <div className="text-center mb-6">
+              <div className="flex justify-center gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-star text-star" />
+                ))}
+              </div>
+              <p className="text-accent text-xs font-semibold tracking-widest uppercase">
+                Client Reviews
+              </p>
+              <h3 className="font-display text-2xl font-bold text-foreground mt-1">
+                What our clients say
+              </h3>
+              <p className="text-muted-foreground text-sm mt-1">
+                Rated 4.9/5 from 195+ Google reviews
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4">
+              {FULL_REVIEWS.map((review, idx) => (
+                <motion.div
+                  key={idx}
+                  custom={3 + idx}
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="rounded-xl border border-border bg-background p-5 flex flex-col items-center"
+                >
+                  <div className="flex gap-0.5 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-star text-star" />
+                    ))}
+                  </div>
+                  <p className="text-foreground text-sm leading-relaxed mb-3 text-center">
+                    "{review.text}"
+                  </p>
+                  <p className="text-foreground font-semibold text-sm">
+                    — {review.name}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
