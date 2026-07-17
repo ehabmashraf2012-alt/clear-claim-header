@@ -140,40 +140,64 @@ const MeetTheTeam = () => {
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent className="max-w-2xl p-0 overflow-hidden gap-0 bg-background">
           {selected && (
-            <div className="grid md:grid-cols-[240px_1fr]">
-              {/* Image side */}
-              <div className="relative aspect-square md:aspect-auto md:h-full bg-border">
-                <img
-                  src={selected.image}
-                  alt={selected.name}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent md:bg-gradient-to-r md:from-transparent md:to-background/0" />
-              </div>
+            <div className="max-h-[85vh] overflow-y-auto">
+              <div className="p-6 md:p-8">
+                {/* Top: portrait + name/title */}
+                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-5 md:gap-6">
+                  <div
+                    className="shrink-0 overflow-hidden rounded-lg bg-border shadow-sm"
+                    style={{ width: "clamp(160px, 40vw, 220px)", aspectRatio: "3 / 4" }}
+                  >
+                    <img
+                      src={selected.image}
+                      alt={selected.name}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: selected.imagePosition ?? "center 20%" }}
+                    />
+                  </div>
 
-              {/* Content side */}
-              <div className="p-6 md:p-8 max-h-[80vh] overflow-y-auto">
-                <DialogHeader className="text-left space-y-1 mb-4">
-                  <p className="text-accent text-xs font-semibold tracking-widest uppercase">
-                    {selected.role}
-                  </p>
-                  <DialogTitle className="font-display text-2xl md:text-3xl font-bold text-foreground">
-                    {selected.name}
-                  </DialogTitle>
-                  {selected.qualifications && (
-                    <p className="text-xs text-muted-foreground">{selected.qualifications}</p>
-                  )}
-                </DialogHeader>
+                  <DialogHeader className="text-center md:text-left space-y-1 md:pt-2">
+                    <p className="text-accent text-xs font-semibold tracking-widest uppercase">
+                      {selected.role}
+                    </p>
+                    <DialogTitle className="font-display text-2xl md:text-3xl font-bold text-foreground">
+                      {selected.name}
+                    </DialogTitle>
+                    {selected.qualifications && (
+                      <p className="text-xs text-muted-foreground">{selected.qualifications}</p>
+                    )}
 
-                <div className="h-px bg-border my-4" />
+                    <div className="flex items-center justify-center md:justify-start gap-3 pt-3">
+                      <a
+                        href="#"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
+                        aria-label={`Email ${selected.name}`}
+                      >
+                        <Mail className="h-3.5 w-3.5" /> Email
+                      </a>
+                      <a
+                        href="#"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
+                        aria-label={`${selected.name} on LinkedIn`}
+                      >
+                        <Linkedin className="h-3.5 w-3.5" /> LinkedIn
+                      </a>
+                    </div>
+                  </DialogHeader>
+                </div>
 
-                <DialogDescription className="text-sm text-foreground/80 leading-relaxed space-y-4">
-                  {selected.bio.split("\n\n").map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))}
+                <div className="h-px bg-border my-6" />
+
+                {/* Bio: full width below */}
+                <DialogDescription asChild>
+                  <div className="text-sm text-foreground/80 leading-relaxed space-y-4">
+                    {selected.bio.split("\n\n").map((paragraph, idx) => (
+                      <p key={idx}>{paragraph}</p>
+                    ))}
+                  </div>
                 </DialogDescription>
 
-                <div className="mt-5">
+                <div className="mt-6">
                   <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-2">
                     Areas of expertise
                   </p>
@@ -187,23 +211,6 @@ const MeetTheTeam = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-
-                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-border">
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
-                    aria-label={`Email ${selected.name}`}
-                  >
-                    <Mail className="h-3.5 w-3.5" /> Email
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
-                    aria-label={`${selected.name} on LinkedIn`}
-                  >
-                    <Linkedin className="h-3.5 w-3.5" /> LinkedIn
-                  </a>
                 </div>
               </div>
             </div>
