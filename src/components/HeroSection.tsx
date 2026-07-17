@@ -1,7 +1,22 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+
+const FULL_REVIEWS = [
+  {
+    text: "Many thanks to Daniela and the team for their extremely helpful and sound advice. A suggested heartful letter of appeal achieved the desired outcome.",
+    name: "Pauline Howard",
+  },
+  {
+    text: "I approached this solicitor firm with a complex dispute, and from my very first contact with Louise, I felt genuinely listened to and reassured that I was in the right place to seek help and resolution.",
+    name: "Donna Ali",
+  },
+  {
+    text: "I would highly recommend this firm. Courteous and considerate people.",
+    name: "Julie Camp",
+  },
+];
 
 const REVIEWS = [
   {
