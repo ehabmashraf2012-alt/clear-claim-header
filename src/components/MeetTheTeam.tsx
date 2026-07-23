@@ -173,7 +173,7 @@ const MeetTheTeam = () => {
                       <p className="text-xs text-muted-foreground">{selected.qualifications}</p>
                     )}
 
-                    <div className="flex items-center justify-center md:justify-start gap-3 pt-3">
+                    <div className="flex items-center justify-center md:justify-start pt-3">
                       <button
                         type="button"
                         onClick={() => {
@@ -191,18 +191,12 @@ const MeetTheTeam = () => {
                             }
                           }, 100);
                         }}
-                        className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
+                        className="group inline-flex items-center gap-1.5 bg-accent text-accent-foreground px-5 py-2.5 rounded-full text-xs font-semibold hover:opacity-90 transition-opacity"
                         aria-label="Start your free assessment"
                       >
                         Free claim assessment
+                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                       </button>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
-                        aria-label={`${selected.name} on LinkedIn`}
-                      >
-                        <Linkedin className="h-3.5 w-3.5" /> LinkedIn
-                      </a>
                     </div>
                   </DialogHeader>
                 </div>
