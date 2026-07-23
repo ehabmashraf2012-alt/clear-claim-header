@@ -67,7 +67,7 @@ const HeaderNavB = () => {
       {/* Dark hero banner — HCR-inspired */}
       <div className="relative bg-primary text-primary-foreground px-4 py-12 md:py-20 overflow-hidden">
         <img src={heroTexture.url} alt="" className="absolute inset-0 w-full h-full object-cover object-[65%_30%] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/75 to-primary/45 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/65 to-primary/20 pointer-events-none" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
