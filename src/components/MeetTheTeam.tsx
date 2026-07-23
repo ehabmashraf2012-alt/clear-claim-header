@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
-import { Linkedin, Mail, X } from "lucide-react";
+import { Linkedin, X } from "lucide-react";
 import teamRichard from "@/assets/richard-v2.webp.asset.json";
 import teamEleanor from "@/assets/eleanor-stenson.jpg.asset.json";
 import teamDaniela from "@/assets/team-daniela.jpg";
@@ -174,13 +174,28 @@ const MeetTheTeam = () => {
                     )}
 
                     <div className="flex items-center justify-center md:justify-start gap-3 pt-3">
-                      <a
-                        href="#"
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSelected(null);
+                          setTimeout(() => {
+                            const form = document.getElementById("form");
+                            if (form) {
+                              form.scrollIntoView({ behavior: "smooth", block: "start" });
+                              setTimeout(() => {
+                                form.classList.add("ring-4", "ring-accent", "ring-offset-4", "transition-all");
+                                setTimeout(() => {
+                                  form.classList.remove("ring-4", "ring-accent", "ring-offset-4", "transition-all");
+                                }, 2000);
+                              }, 700);
+                            }
+                          }, 100);
+                        }}
                         className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
-                        aria-label={`Email ${selected.name}`}
+                        aria-label="Start your free assessment"
                       >
-                        <Mail className="h-3.5 w-3.5" /> Email
-                      </a>
+                        Free claim assessment
+                      </button>
                       <a
                         href="#"
                         className="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
