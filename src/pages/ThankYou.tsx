@@ -55,6 +55,17 @@ const ThankYou = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="max-w-3xl mx-auto md:mx-0 mb-14 text-center md:text-left space-y-4 text-foreground text-base md:text-lg font-normal leading-relaxed"
+          >
+            <p>Thank you for telling us about your loved one's estate and your concerns. Your answers have been reviewed by our free Fast Track Claim Assessment AI tool, built on the knowledge of our specialist lawyers.</p>
+            <p>Your concerns have sufficient legal merit for our Triage team to contact you by email or phone. They will check your details and gather any further information needed, so that if your case is passed to our Legal team, they can give you clear initial advice.</p>
+            <p><span className="font-semibold">Everything up to this point is free of charge.</span> That includes using the assessment tool, speaking with our Triage team and any initial discussion with our Legal team. If you then decide to instruct IDR Law, we will send you a formal retainer to approve before any work begins.</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
             className="mb-12 text-center md:text-left"
           >
             <div className="w-10 h-1 rounded-full bg-accent mb-3 mx-auto md:mx-0" />
