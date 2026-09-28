@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ThankYou from "./pages/ThankYou.tsx";
 import SiblingDisputes from "./pages/SiblingDisputes.tsx";
+import TimeLimits from "./pages/TimeLimits.tsx";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/sibling-disputes" element={<SiblingDisputes />} />
+          <Route path="/time-limits" element={<TimeLimits />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,13 +1,11 @@
 import { useEffect } from "react";
-import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import ThemeHeader from "@/components/theme/ThemeHeader";
 import ThemeHero from "@/components/theme/ThemeHero";
 import TrustStrip from "@/components/theme/TrustStrip";
 import SnippetSection from "@/components/theme/SnippetSection";
 import ThemeFAQ from "@/components/theme/ThemeFAQ";
 import StickyCTA from "@/components/theme/StickyCTA";
-import { scrollToForm } from "@/components/theme/scrollToForm";
+import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
 
@@ -42,43 +40,6 @@ const faqs = [
   { q: "Is the claim assessment free?", a: "Yes. Our initial claim assessment is free of charge, and there is no obligation to go any further." },
 ];
 
-const CtaButton = ({ label }: { label: string }) => (
-  <a
-    href="#form"
-    onClick={scrollToForm}
-    className="group inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity"
-  >
-    {label}
-    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-  </a>
-);
-
-const NavyBand = ({ heading, children }: { heading: string; children: React.ReactNode }) => (
-  <section className="relative overflow-hidden bg-primary">
-    <div
-      className="absolute inset-0 opacity-[0.07] pointer-events-none"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at 20% 30%, hsl(var(--accent)) 0%, transparent 40%), radial-gradient(circle at 80% 70%, hsl(var(--accent)) 0%, transparent 40%)",
-      }}
-    />
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="relative z-10 container mx-auto max-w-6xl px-4 py-16 md:py-24"
-    >
-      <div className="max-w-2xl space-y-6">
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight">
-          {heading}
-        </h2>
-        {children}
-      </div>
-    </motion.div>
-  </section>
-);
-
 const SiblingDisputes = () => {
   useEffect(() => {
     const prev = document.title;
@@ -95,6 +56,7 @@ const SiblingDisputes = () => {
         eyebrow="Sibling inheritance disputes"
         title="A parent's death does not always bring siblings closer."
         subtitle="Grief, long-standing tension and feeling excluded or treated unfairly in a will can quickly lead to conflict. Whether your sibling is contesting the will, you have been left out, or you are worried about how the estate is being handled, we can help you understand where you stand."
+        mobileSubtitle="Whether your sibling is contesting the will, you have been left out, or you are worried about how the estate is being handled, we can help."
         formPrompt="In a dispute with your sibling? Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />
