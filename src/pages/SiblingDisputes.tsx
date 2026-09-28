@@ -9,28 +9,30 @@ import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import NoLegalFeesSection from "@/components/NoLegalFeesSection";
 import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholder";
 
 const snippets = [
   {
     title: "When your sibling is the executor",
     body: "If your brother or sister is the executor, they must act in the interests of every beneficiary, not just their own. That means keeping the estate's assets safe, keeping proper accounts and distributing the estate in line with the will. If you are worried about how the estate is being handled, or you believe assets have been taken or held back, you can ask for a full account. In some cases the court can remove an executor. Getting advice early helps protect your position.",
-    cta: "Talk to us about your situation",
+    cta: "Check your options",
   },
   {
     title: "What is a caveat?",
     body: "A Caveat prevents anyone from obtaining the Grant of Probate and so delays administration of the estate pending resolution of the dispute. If the Grant of Probate has already been obtained, you or the personal representatives of the estate may receive a request to place administration of the estate on hold whilst investigations take place. Personal representatives should remain neutral, but as a beneficiary you are not required to be neutral and can defend claims brought by siblings.",
-    cta: "Start your free assessment",
+    cta: "Check if you need a caveat",
   },
   {
     title: "Received a letter of claim?",
     body: "You may receive a Letter of Claim setting out the grounds on which the will is being contested and the evidence to support them. Evidence often includes medical records, notes from the will file and witness evidence. If a Caveat has been entered or you are on notice of a claim, it is sensible to seek legal advice. You will usually need to respond with a Letter of Response, setting out evidence that the will is valid and any suggestions for resolving the dispute.",
-    cta: "Start your free assessment",
+    cta: "Get help with your response",
   },
   {
     title: "Avoiding court with mediation",
     body: "Particularly where siblings are challenging a will, it is sensible to look for ways to avoid court and reach an agreement that works for everyone. Mediation is often an effective way to settle the claim. A mediator goes between the parties to help them reach a settlement, you do not have to see one another, and mediation can be carried out remotely.",
-    cta: "Start your free assessment",
+    cta: "Check if mediation could work",
   },
 ];
 
@@ -56,9 +58,9 @@ const SiblingDisputes = () => {
       <ThemeHeader />
       <ThemeHero
         eyebrow="Sibling inheritance disputes"
-        title="A parent's death does not always bring siblings closer."
-        subtitle="Grief, long-standing tension and feeling excluded or treated unfairly in a will can quickly lead to conflict. Whether your sibling is contesting the will, you have been left out, or you are worried about how the estate is being handled, we can help you understand where you stand."
-        mobileSubtitle="Whether your sibling is contesting the will, you have been left out, or you are worried about how the estate is being handled, we can help."
+        title="Dispute With a Sibling Over a Will or Inheritance?"
+        subtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
+        mobileSubtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
         formPrompt="In a dispute with your sibling? Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />
@@ -76,6 +78,8 @@ const SiblingDisputes = () => {
         </p>
         <CtaButton label="Check if you can claim" />
       </NavyBand>
+      <HowItWorksSection />
+      <NoLegalFeesSection />
       <ThemeFAQ heading="Questions about sibling inheritance disputes" items={faqs} />
       <NavyBand heading="Talk to us about your sibling dispute">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>
