@@ -43,10 +43,11 @@ interface ThemeHeroProps {
   eyebrow: string;
   title: string;
   subtitle: string;
+  mobileSubtitle?: string;
   formPrompt: string;
 }
 
-const ThemeHero = ({ eyebrow, title, subtitle, formPrompt }: ThemeHeroProps) => (
+const ThemeHero = ({ eyebrow, title, subtitle, mobileSubtitle, formPrompt }: ThemeHeroProps) => (
   <section className="relative bg-primary text-primary-foreground px-4 py-8 md:py-16 overflow-hidden">
     <img
       src={heroImage.url}
@@ -60,7 +61,14 @@ const ThemeHero = ({ eyebrow, title, subtitle, formPrompt }: ThemeHeroProps) => 
       <div>
         <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">{eyebrow}</p>
         <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-4">{title}</h1>
-        <p className="text-primary-foreground/75 text-base md:text-lg max-w-xl">{subtitle}</p>
+        {mobileSubtitle ? (
+          <>
+            <p className="md:hidden text-primary-foreground/75 text-base max-w-xl">{mobileSubtitle}</p>
+            <p className="hidden md:block text-primary-foreground/75 text-lg max-w-xl">{subtitle}</p>
+          </>
+        ) : (
+          <p className="text-primary-foreground/75 text-base md:text-lg max-w-xl">{subtitle}</p>
+        )}
         <StepsAndRating className="hidden md:block mt-8" />
       </div>
       <ThemeFormCard formPrompt={formPrompt} />
