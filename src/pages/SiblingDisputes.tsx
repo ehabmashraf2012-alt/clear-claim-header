@@ -9,6 +9,7 @@ import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholder";
 
 const snippets = [
   {
@@ -61,6 +62,9 @@ const SiblingDisputes = () => {
         formPrompt="In a dispute with your sibling? Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />
+      <ReviewsWidgetPlaceholder />
+      <ReviewsPlaceholder />
+      <MeetTheTeam />
       <SnippetSection
         heading="Common situations between siblings"
         intro="Our specialist team handles inheritance disputes between brothers and sisters every day. Here is what often happens, and what you can do."
@@ -72,8 +76,6 @@ const SiblingDisputes = () => {
         </p>
         <CtaButton label="Check if you can claim" />
       </NavyBand>
-      <ReviewsPlaceholder />
-      <MeetTheTeam />
       <ThemeFAQ heading="Questions about sibling inheritance disputes" items={faqs} />
       <NavyBand heading="Talk to us about your sibling dispute">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>

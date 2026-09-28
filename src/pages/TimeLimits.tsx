@@ -10,6 +10,7 @@ import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholder";
 
 const limits = [
   {
@@ -75,6 +76,9 @@ const TimeLimits = () => {
         formPrompt="Tell us when probate was granted. Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />
+      <ReviewsWidgetPlaceholder />
+      <ReviewsPlaceholder />
+      <MeetTheTeam />
 
       <section className="bg-background px-4 md:px-8 py-16 md:py-24">
         <div className="container mx-auto max-w-6xl">
@@ -118,8 +122,6 @@ const TimeLimits = () => {
         </p>
         <CtaButton label="Check if you can still claim" />
       </NavyBand>
-      <ReviewsPlaceholder />
-      <MeetTheTeam />
       <ThemeFAQ heading="Questions about time limits" items={faqs} />
       <NavyBand heading="Check where you stand today">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>
