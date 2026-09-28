@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Check, Phone } from "lucide-react";
-import HeaderNavB from "@/components/HeaderNavB";
+import ThankYouHeader from "@/components/ThankYouHeader";
 import Footer from "@/components/Footer";
 
 const steps = [
@@ -27,7 +27,7 @@ const ThankYou = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <HeaderNavB />
+      <ThankYouHeader />
 
       <section className="bg-primary text-primary-foreground px-4 py-16 md:py-24">
         <motion.div
@@ -57,7 +57,8 @@ const ThankYou = () => {
             transition={{ duration: 0.5 }}
             className="mb-12 text-center md:text-left"
           >
-            <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">Next steps</p>
+            <div className="w-10 h-1 rounded-full bg-accent mb-3 mx-auto md:mx-0" />
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Next steps</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary leading-tight">
               What happens next
             </h2>
