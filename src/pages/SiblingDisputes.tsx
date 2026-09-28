@@ -64,12 +64,12 @@ const SiblingDisputes = () => {
       <TrustStrip />
       <ReviewsWidgetPlaceholder />
       <ReviewsPlaceholder />
-      <MeetTheTeam />
       <SnippetSection
         heading="Common situations between siblings"
         intro="Our specialist team handles inheritance disputes between brothers and sisters every day. Here is what often happens, and what you can do."
         items={snippets}
       />
+      <MeetTheTeam />
       <NavyBand heading="Left out of a will? You may still have a claim.">
         <p className="text-primary-foreground/75 text-base md:text-lg leading-relaxed">
           If your parent's will left you out or gave you less than you expected, as their child you may be able to bring a claim under the Inheritance (Provision for Family and Dependants) Act 1975. If you were left out of a brother's or sister's will, you may be able to claim if they were wholly or partly maintaining you immediately before they died. These claims normally need to be brought within six months of the grant of probate, so it is worth getting advice promptly.
