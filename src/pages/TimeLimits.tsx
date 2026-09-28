@@ -10,23 +10,25 @@ import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import NoLegalFeesSection from "@/components/NoLegalFeesSection";
 import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholder";
 
 const limits = [
   {
-    figure: "6 months",
-    title: "Inheritance Act claims",
-    body: "If you have not been left reasonable financial provision, a claim under the Inheritance Act 1975 normally needs to be brought within six months of the grant of probate. After that, you need the court's permission to bring a claim.",
+    badge: "There's a strict 6-month deadline",
+    title: "Left Out of a Will or Unfairly Provided For?",
+    body: <>You generally have <strong className="font-semibold text-foreground">6 months from the Grant of Probate</strong> to bring a claim under the Inheritance Act 1975. Missing this date requires court permission.</>,
   },
   {
-    figure: "Before probate",
-    title: "Stopping the grant",
-    body: "If probate has not yet been granted, a Caveat can be entered to stop anyone obtaining the Grant of Probate while concerns about the will are looked into.",
+    badge: "You must act before probate",
+    title: "Need to Freeze Estate Distribution?",
+    body: <>If probate has not yet been granted, a <strong className="font-semibold text-foreground">Caveat</strong> can be entered immediately to stop anyone obtaining the grant while concerns are investigated.</>,
   },
   {
-    figure: "Varies",
-    title: "Other challenges",
-    body: "Some grounds for challenging a will, such as fraud, have no time limit. Other claims have their own specific limitation periods. The sooner you get advice, the more options you are likely to have.",
+    badge: "Time limits are not fixed",
+    title: "Suspect Fraud, Coercion, or an Invalid Will?",
+    body: <>Grounds such as <strong className="font-semibold text-foreground">fraud, forgery, or lack of mental capacity</strong> are not bound by the 6-month rule, though early action prevents assets from being distributed.</>,
   },
 ];
 
@@ -34,7 +36,7 @@ const snippets = [
   {
     title: "Do you have to wait 6 months after probate?",
     body: "Not necessarily, but executors are advised to wait at least 6 months from the date of the grant before distributing the estate in full. Under the Inheritance (Provision for Family and Dependants) Act 1975, anyone wishing to make a claim against the estate must do so within 6 months of the grant of probate. Distributing earlier than this can leave an executor personally liable if a valid claim is made afterwards.",
-    cta: "Start your free assessment",
+    cta: "Check your deadline",
   },
   {
     title: "Size and complexity of the estate",
@@ -44,7 +46,7 @@ const snippets = [
   {
     title: "Claims under the Inheritance Act 1975",
     body: "Claims under the Inheritance (Provision for Family and Dependants) Act 1975 can further delay distribution. Claimants may issue their claim at the end of the 6 month period and would still have 4 months to serve it, so executors may wait as long as 10 months from the grant of probate before distributing any funds. As a result, probate distribution is sometimes a lengthy process.",
-    cta: "Start your free assessment",
+    cta: "Check your deadline",
   },
 ];
 
@@ -87,7 +89,7 @@ const TimeLimits = () => {
             transition={{ duration: 0.5 }}
             className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-12 max-w-2xl"
           >
-            The time limits that matter
+            The Time Limits &amp; Deadlines That Matter
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
             {limits.map((l, i) => (
@@ -99,7 +101,7 @@ const TimeLimits = () => {
                 transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
                 className="bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col hover:shadow-md transition-shadow"
               >
-                <p className="font-display text-3xl md:text-4xl font-bold text-accent mb-3">{l.figure}</p>
+                <span className="self-start uppercase text-xs font-semibold tracking-wide rounded-full bg-accent/20 text-foreground px-3 py-1 mb-4">{l.badge}</span>
                 <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug mb-4">{l.title}</h3>
                 <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{l.body}</p>
               </motion.article>
@@ -111,7 +113,7 @@ const TimeLimits = () => {
       <MeetTheTeam />
 
       <SnippetSection
-        heading="Waiting for your inheritance?"
+        heading="Is It Too Late to Contest a Will? Check Your Deadline"
         intro="Executors generally have up to 12 months from the grant of probate to distribute an estate, often called the executor's year. A delay on its own is not necessarily a warning sign, but it is worth checking whether the circumstances are reasonable."
         items={snippets}
       />
@@ -121,6 +123,8 @@ const TimeLimits = () => {
         </p>
         <CtaButton label="Check if you can still claim" />
       </NavyBand>
+      <HowItWorksSection />
+      <NoLegalFeesSection />
       <ThemeFAQ heading="Questions about time limits" items={faqs} />
       <NavyBand heading="Check where you stand today">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>
