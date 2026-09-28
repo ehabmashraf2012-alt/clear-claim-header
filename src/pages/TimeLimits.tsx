@@ -78,8 +78,6 @@ const TimeLimits = () => {
       <TrustStrip />
       <ReviewsWidgetPlaceholder />
       <ReviewsPlaceholder />
-      <MeetTheTeam />
-
       <section className="bg-background px-4 md:px-8 py-16 md:py-24">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
@@ -110,6 +108,7 @@ const TimeLimits = () => {
           <CtaButton label="Check your deadline" />
         </div>
       </section>
+      <MeetTheTeam />
 
       <SnippetSection
         heading="Waiting for your inheritance?"
