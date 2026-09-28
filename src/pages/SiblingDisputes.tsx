@@ -8,6 +8,7 @@ import StickyCTA from "@/components/theme/StickyCTA";
 import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
+import MeetTheTeam from "@/components/MeetTheTeam";
 
 const snippets = [
   {
@@ -72,6 +73,7 @@ const SiblingDisputes = () => {
         <CtaButton label="Check if you can claim" />
       </NavyBand>
       <ReviewsPlaceholder />
+      <MeetTheTeam />
       <ThemeFAQ heading="Questions about sibling inheritance disputes" items={faqs} />
       <NavyBand heading="Talk to us about your sibling dispute">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>

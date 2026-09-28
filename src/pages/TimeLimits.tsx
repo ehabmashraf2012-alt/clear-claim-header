@@ -9,6 +9,7 @@ import StickyCTA from "@/components/theme/StickyCTA";
 import NavyBand, { CtaButton } from "@/components/theme/NavyBand";
 import ReviewsPlaceholder from "@/components/ReviewsPlaceholder";
 import Footer from "@/components/Footer";
+import MeetTheTeam from "@/components/MeetTheTeam";
 
 const limits = [
   {
@@ -118,6 +119,7 @@ const TimeLimits = () => {
         <CtaButton label="Check if you can still claim" />
       </NavyBand>
       <ReviewsPlaceholder />
+      <MeetTheTeam />
       <ThemeFAQ heading="Questions about time limits" items={faqs} />
       <NavyBand heading="Check where you stand today">
         <p className="text-primary-foreground/75 text-base md:text-lg">Our Triage Team usually responds the same day.</p>
