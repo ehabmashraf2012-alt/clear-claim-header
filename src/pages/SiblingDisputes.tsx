@@ -71,8 +71,8 @@ const SiblingDisputes = () => {
       <ThemeHero
         eyebrow="Sibling inheritance disputes"
         title="Dispute with a sibling over a will or inheritance?"
-        subtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
-        mobileSubtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
+        subtitle="Whether you have been unfairly left out of your parent's will or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
+        mobileSubtitle="Whether you have been unfairly left out of your parent's will or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
         formPrompt="In a dispute with your sibling? Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />

@@ -40,10 +40,10 @@ const ThankYou = () => {
             <Check className="w-10 h-10 text-primary" strokeWidth={3} />
           </div>
           <h1 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-5">
-            Thank you, we have received your assessment
+            Thank you for sharing the details of your situation with us
           </h1>
           <p className="text-primary-foreground/80 text-base md:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
-            A member of our specialist Triage Team will be in touch shortly to talk through your situation. There is no obligation.
+            A member of our specialist Triage team will be in touch shortly to talk through your situation. There's no obligation.
           </p>
         </motion.div>
       </section>
@@ -57,9 +57,9 @@ const ThankYou = () => {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto md:mx-0 mb-14 text-center md:text-left space-y-4 text-foreground text-base md:text-lg font-normal leading-relaxed"
           >
-            <p>Thank you for telling us about your loved one's estate and your concerns. Your answers have been reviewed by our free Fast Track Claim Assessment AI tool, built on the knowledge of our specialist lawyers.</p>
-            <p>Your concerns have sufficient legal merit for our Triage team to contact you by email or phone. They will check your details and gather any further information needed, so that if your case is passed to our Legal team, they can give you clear initial advice.</p>
-            <p><span className="font-semibold">Everything up to this point is free of charge.</span> That includes using the assessment tool, speaking with our Triage team and any initial discussion with our Legal team. If you then decide to instruct IDR Law, we will send you a formal retainer to approve before any work begins.</p>
+            <p>We know sharing details about a loved one's estate isn't easy, so thank you for trusting us with this.</p>
+            <p>Your answers have been reviewed using our Fast Track process, built on the knowledge of our specialist lawyers, and there's sufficient merit here for our Triage team to get in touch by phone or email. They'll check the details with you and gather anything else that's needed, so that if your case is passed to our Legal team, they can give you clear and transparent advice from the start.</p>
+            <p><span className="font-semibold">Everything up to this point is free</span>: the initial review, speaking with our Triage team, and any first conversation with our Legal team. If you decide to go ahead with IDR Law after that, we'll send you a formal agreement to approve before any work begins, so you're never committed to anything without knowing exactly what it involves.</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
