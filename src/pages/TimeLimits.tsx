@@ -82,8 +82,8 @@ const TimeLimits = () => {
       <ThemeHero
         eyebrow="Time limits for contesting a will"
         title="How long do you have to contest a will?"
-        subtitle="Claims under the Inheritance (Provision for Family and Dependants) Act 1975 normally need to be brought within six months of the grant of probate. Miss that deadline and you may lose the chance to claim, so it pays to get advice early."
-        mobileSubtitle="Inheritance Act claims normally need to be brought within six months of the grant of probate. Get advice early."
+        subtitle="If you're thinking about contesting a will, time is often tighter than people expect. Claims usually need to be brought within six months of the grant of probate, so it's worth getting advice early, even if you're not sure yet whether you have a case."
+        mobileSubtitle="Time is often tighter than people expect. Claims usually need to be brought within six months of the grant of probate, so it's worth getting advice early."
         formPrompt="Tell us when probate was granted. Chat to us and we will help you understand the next steps."
       />
       <TrustStrip />
