@@ -119,7 +119,9 @@ const TimeLimits = () => {
               </motion.article>
             ))}
           </div>
-          <CtaButton label="Check your deadline" />
+          <div className="flex justify-center">
+            <CtaButton label="Check your deadline" />
+          </div>
         </div>
       </section>
       <MeetTheTeam />
