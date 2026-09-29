@@ -17,17 +17,17 @@ import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholde
 const limits = [
   {
     badge: "There's a strict 6-month deadline",
-    title: "Left Out of a Will or Unfairly Provided For?",
+    title: "Left out of a will or unfairly provided for?",
     body: <>You generally have <strong className="font-semibold text-foreground">6 months from the Grant of Probate</strong> to bring a claim under the Inheritance Act 1975. Missing this date requires court permission.</>,
   },
   {
     badge: "You must act before probate",
-    title: "Need to Freeze Estate Distribution?",
+    title: "Need to freeze estate distribution?",
     body: <>If probate has not yet been granted, a <strong className="font-semibold text-foreground">Caveat</strong> can be entered immediately to stop anyone obtaining the grant while concerns are investigated.</>,
   },
   {
     badge: "Time limits are not fixed",
-    title: "Suspect Fraud, Coercion, or an Invalid Will?",
+    title: "Suspect fraud, coercion, or an invalid will?",
     body: <>Grounds such as <strong className="font-semibold text-foreground">fraud, forgery, or lack of mental capacity</strong> are not bound by the 6-month rule, though early action prevents assets from being distributed.</>,
   },
 ];
@@ -89,7 +89,7 @@ const TimeLimits = () => {
             transition={{ duration: 0.5 }}
             className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-12 max-w-2xl"
           >
-            The Time Limits &amp; Deadlines That Matter
+            The time limits &amp; deadlines that matter
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10">
             {limits.map((l, i) => (
@@ -113,7 +113,7 @@ const TimeLimits = () => {
       <MeetTheTeam />
 
       <SnippetSection
-        heading="Is It Too Late to Contest a Will? Check Your Deadline"
+        heading="Is it too late to contest a will? Check your deadline"
         intro="Executors generally have up to 12 months from the grant of probate to distribute an estate, often called the executor's year. A delay on its own is not necessarily a warning sign, but it is worth checking whether the circumstances are reasonable."
         items={snippets}
       />

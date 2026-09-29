@@ -58,7 +58,7 @@ const SiblingDisputes = () => {
       <ThemeHeader />
       <ThemeHero
         eyebrow="Sibling inheritance disputes"
-        title="Dispute With a Sibling Over a Will or Inheritance?"
+        title="Dispute with a sibling over a will or inheritance?"
         subtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
         mobileSubtitle="Whether you've been unfairly cut out or a sibling is mismanaging estate assets, our specialist team helps resolve family inheritance claims quickly and discreetly."
         formPrompt="In a dispute with your sibling? Chat to us and we will help you understand the next steps."
