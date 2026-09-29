@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="A calendar with a date circled and a clock, representing the six month deadline">
+<ellipse cx="180" cy="182" rx="158" ry="9" fill="#E6DDC2"/>
+<circle cx="40" cy="46" r="4" fill="#253E5D" opacity="0.15"/>
+<circle cx="316" cy="40" r="5" fill="#253E5D" opacity="0.15"/>
+<circle cx="60" cy="130" r="3" fill="#253E5D" opacity="0.15"/>
+<path d="M68 72 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#E8C855" stroke="#253E5D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M308 90 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#E8C855"/>
+<rect x="104" y="42" width="152" height="138" rx="10" fill="#FFFFFF" stroke="#253E5D" stroke-width="3.5"/>
+<path d="M104 52 a10 10 0 0 1 10 -10 h132 a10 10 0 0 1 10 10 v26 h-152z" fill="#253E5D"/>
+<rect x="136" y="30" width="11" height="24" rx="5.5" fill="#E8C855" stroke="#253E5D" stroke-width="3"/>
+<rect x="213" y="30" width="11" height="24" rx="5.5" fill="#E8C855" stroke="#253E5D" stroke-width="3"/>
+<g fill="#D9DFE7">
+<rect x="120" y="92" width="20" height="16" rx="3"/><rect x="150" y="92" width="20" height="16" rx="3"/><rect x="180" y="92" width="20" height="16" rx="3"/><rect x="210" y="92" width="20" height="16" rx="3"/>
+<rect x="120" y="118" width="20" height="16" rx="3"/><rect x="150" y="118" width="20" height="16" rx="3"/><rect x="180" y="118" width="20" height="16" rx="3"/>
+<rect x="120" y="144" width="20" height="16" rx="3"/><rect x="150" y="144" width="20" height="16" rx="3"/>
+</g>
+<rect x="210" y="118" width="20" height="16" rx="3" fill="#E8C855"/>
+<circle cx="220" cy="126" r="17" fill="none" stroke="#253E5D" stroke-width="3"/>
+<circle cx="266" cy="148" r="30" fill="#E8C855" stroke="#253E5D" stroke-width="3.5"/>
+<circle cx="266" cy="148" r="22" fill="#FFFFFF"/>
+<path d="M266 134 v14 l10 7" fill="none" stroke="#253E5D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="266" cy="148" r="3" fill="#253E5D"/>
+</svg>

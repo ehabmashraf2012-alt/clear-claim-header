@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="An envelope with a letter and an alert symbol, representing receiving a letter of claim">
+<ellipse cx="180" cy="182" rx="158" ry="9" fill="#E6DDC2"/>
+<circle cx="34" cy="50" r="4" fill="#253E5D" opacity="0.15"/>
+<circle cx="60" cy="108" r="3" fill="#253E5D" opacity="0.15"/>
+<circle cx="326" cy="112" r="4" fill="#253E5D" opacity="0.15"/>
+<path d="M58 60 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#E8C855" stroke="#253E5D" stroke-width="2" stroke-linejoin="round"/>
+<rect x="94" y="94" width="176" height="84" rx="6" fill="#253E5D"/>
+<rect x="112" y="40" width="140" height="112" rx="5" fill="#FFFFFF" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="128" y="56" width="70" height="9" rx="4.5" fill="#E8C855"/>
+<rect x="128" y="76" width="106" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="128" y="90" width="96" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="128" y="104" width="102" height="6" rx="3" fill="#D9DFE7"/>
+<path d="M94 112 l88 44 88 -44 v60 a6 6 0 0 1 -6 6 h-164 a6 6 0 0 1 -6 -6z" fill="#F6F1E1" stroke="#253E5D" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M94 176 l66 -42 M270 176 l-66 -42" stroke="#253E5D" stroke-width="3" stroke-linecap="round"/>
+<circle cx="258" cy="46" r="20" fill="#E8C855" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="254.5" y="33" width="7" height="17" rx="3.5" fill="#253E5D"/>
+<circle cx="258" cy="57" r="3.8" fill="#253E5D"/>
+<g transform="rotate(-35 314 158)">
+<rect x="286" y="152" width="52" height="12" rx="3" fill="#E8C855" stroke="#253E5D" stroke-width="2.5"/>
+<rect x="286" y="152" width="10" height="12" rx="2" fill="#253E5D"/>
+<path d="M338 152 l12 6 -12 6z" fill="#FFFFFF" stroke="#253E5D" stroke-width="2.5" stroke-linejoin="round"/>
+</g>
+</svg>

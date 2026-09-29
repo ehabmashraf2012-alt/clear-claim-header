@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="A magnifying glass over a signed will with a question mark, representing checking whether a will is valid">
+<ellipse cx="180" cy="182" rx="158" ry="9" fill="#E6DDC2"/>
+<circle cx="44" cy="52" r="4" fill="#253E5D" opacity="0.15"/>
+<circle cx="320" cy="36" r="5" fill="#253E5D" opacity="0.15"/>
+<circle cx="64" cy="140" r="3" fill="#253E5D" opacity="0.15"/>
+<path d="M74 88 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#E8C855" stroke="#253E5D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M312 72 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#E8C855"/>
+<rect x="106" y="34" width="128" height="148" rx="8" fill="#FFFFFF" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="122" y="52" width="54" height="9" rx="4.5" fill="#253E5D"/>
+<rect x="122" y="74" width="94" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="122" y="88" width="84" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="122" y="102" width="90" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="122" y="116" width="60" height="6" rx="3" fill="#D9DFE7"/>
+<path d="M124 160 c8 -14 14 -14 14 -4 c0 8 8 -10 14 -8 c6 2 2 10 10 6 c6 -3 10 -6 16 -4" fill="none" stroke="#253E5D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="122" y="168" width="60" height="3" rx="1.5" fill="#D9DFE7"/>
+<line x1="262" y1="138" x2="298" y2="174" stroke="#253E5D" stroke-width="18" stroke-linecap="round"/>
+<line x1="266" y1="142" x2="296" y2="172" stroke="#E8C855" stroke-width="10" stroke-linecap="round"/>
+<circle cx="236" cy="112" r="40" fill="#F6F1E1" stroke="#253E5D" stroke-width="8"/>
+<path d="M224 100 a12 12 0 1 1 17 11 c-4 2 -5 5 -5 10" fill="none" stroke="#253E5D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="236" cy="132" r="4" fill="#253E5D"/>
+</svg>
