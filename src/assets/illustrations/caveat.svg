@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="A probate document with a pause symbol and an hourglass, representing a caveat pausing the grant of probate">
+<ellipse cx="180" cy="182" rx="158" ry="9" fill="#E6DDC2"/>
+<circle cx="36" cy="44" r="4" fill="#253E5D" opacity="0.15"/>
+<circle cx="318" cy="36" r="5" fill="#253E5D" opacity="0.15"/>
+<circle cx="330" cy="108" r="3" fill="#253E5D" opacity="0.15"/>
+<path d="M300 62 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#E8C855" stroke="#253E5D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M52 78 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#E8C855"/>
+<rect x="54" y="116" width="44" height="7" rx="3.5" fill="#253E5D"/>
+<rect x="54" y="171" width="44" height="7" rx="3.5" fill="#253E5D"/>
+<path d="M60 123 h32 c0 14 -12 18 -12 24 c0 6 12 10 12 24 h-32 c0 -14 12 -18 12 -24 c0 -6 -12 -10 -12 -24z" fill="#FFFFFF" stroke="#253E5D" stroke-width="3" stroke-linejoin="round"/>
+<path d="M66 129 h20 c-2 6 -7 9 -10 12 c-3 -3 -8 -6 -10 -12z" fill="#E8C855"/>
+<path d="M65 167 c2 -8 8 -11 11 -13 c3 2 9 5 11 13z" fill="#E8C855"/>
+<rect x="118" y="36" width="122" height="144" rx="8" fill="#FFFFFF" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="134" y="54" width="62" height="9" rx="4.5" fill="#253E5D"/>
+<rect x="134" y="76" width="90" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="134" y="90" width="80" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="134" y="104" width="86" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="134" y="118" width="54" height="6" rx="3" fill="#D9DFE7"/>
+<circle cx="148" cy="154" r="11" fill="#E8C855" stroke="#253E5D" stroke-width="3"/>
+<path d="M142 163 l-4 12 7 -3 3 6 3 -12" fill="#E8C855" stroke="#253E5D" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="246" cy="138" r="38" fill="#E8C855" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="231" y="121" width="10" height="34" rx="3" fill="#253E5D"/>
+<rect x="251" y="121" width="10" height="34" rx="3" fill="#253E5D"/>
+</svg>

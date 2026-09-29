@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="An estate document and coins secured with a padlock, representing freezing the estate before probate">
+<ellipse cx="180" cy="182" rx="158" ry="9" fill="#E6DDC2"/>
+<circle cx="36" cy="40" r="4" fill="#253E5D" opacity="0.15"/>
+<circle cx="320" cy="44" r="5" fill="#253E5D" opacity="0.15"/>
+<circle cx="330" cy="130" r="3" fill="#253E5D" opacity="0.15"/>
+<path d="M296 70 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#E8C855" stroke="#253E5D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M60 176 v-8 a18 7 0 0 0 36 0 v8 a18 7 0 0 1 -36 0z" fill="#D4B444" stroke="#253E5D" stroke-width="2.5"/>
+<ellipse cx="78" cy="168" rx="18" ry="7" fill="#E8C855" stroke="#253E5D" stroke-width="2.5"/>
+<path d="M60 164 v-8 a18 7 0 0 0 36 0 v8 a18 7 0 0 1 -36 0z" fill="#D4B444" stroke="#253E5D" stroke-width="2.5"/>
+<ellipse cx="78" cy="156" rx="18" ry="7" fill="#E8C855" stroke="#253E5D" stroke-width="2.5"/>
+<rect x="116" y="34" width="120" height="146" rx="8" fill="#FFFFFF" stroke="#253E5D" stroke-width="3.5"/>
+<rect x="132" y="52" width="58" height="9" rx="4.5" fill="#253E5D"/>
+<rect x="132" y="74" width="88" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="132" y="88" width="78" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="132" y="102" width="84" height="6" rx="3" fill="#D9DFE7"/>
+<rect x="132" y="116" width="50" height="6" rx="3" fill="#D9DFE7"/>
+<path d="M222 124 v-18 a24 24 0 0 1 48 0 v18" fill="none" stroke="#253E5D" stroke-width="9" stroke-linecap="round"/>
+<rect x="206" y="120" width="80" height="60" rx="10" fill="#E8C855" stroke="#253E5D" stroke-width="3.5"/>
+<circle cx="246" cy="144" r="7" fill="#253E5D"/>
+<rect x="242.5" y="146" width="7" height="18" rx="3.5" fill="#253E5D"/>
+</svg>

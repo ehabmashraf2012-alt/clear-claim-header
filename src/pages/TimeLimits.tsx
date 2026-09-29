@@ -13,20 +13,29 @@ import MeetTheTeam from "@/components/MeetTheTeam";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import NoLegalFeesSection from "@/components/NoLegalFeesSection";
 import ReviewsWidgetPlaceholder from "@/components/theme/ReviewsWidgetPlaceholder";
+import deadlineImg from "@/assets/illustrations/deadline.svg";
+import freezeImg from "@/assets/illustrations/freeze.svg";
+import fraudImg from "@/assets/illustrations/fraud.svg";
 
 const limits = [
   {
     badge: "There's a strict 6-month deadline",
+    illustration: deadlineImg,
+    illustrationAlt: "Illustration of a calendar and a clock",
     title: "Left out of a will or unfairly provided for?",
     body: <>You generally have <strong className="font-semibold text-foreground">6 months from the Grant of Probate</strong> to bring a claim under the Inheritance Act 1975. Missing this date requires court permission.</>,
   },
   {
     badge: "You must act before probate",
+    illustration: freezeImg,
+    illustrationAlt: "Illustration of a document and coins with a padlock",
     title: "Need to freeze estate distribution?",
     body: <>If probate has not yet been granted, a <strong className="font-semibold text-foreground">Caveat</strong> can be entered immediately to stop anyone obtaining the grant while concerns are investigated.</>,
   },
   {
     badge: "Time limits are not fixed",
+    illustration: fraudImg,
+    illustrationAlt: "Illustration of a magnifying glass over a will",
     title: "Suspect fraud, coercion, or an invalid will?",
     body: <>Grounds such as <strong className="font-semibold text-foreground">fraud, forgery, or lack of mental capacity</strong> are not bound by the 6-month rule, though early action prevents assets from being distributed.</>,
   },
@@ -101,6 +110,9 @@ const TimeLimits = () => {
                 transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
                 className="bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col hover:shadow-md transition-shadow"
               >
+                <div className="rounded-lg bg-accent/15 h-40 md:h-44 flex items-center justify-center mb-6 overflow-hidden">
+                  <img src={l.illustration} alt={l.illustrationAlt} width={360} height={200} className="h-32 md:h-36 w-auto" loading="lazy" />
+                </div>
                 <span className="self-start uppercase text-xs font-semibold tracking-wide rounded-full bg-accent/20 text-foreground px-3 py-1 mb-4">{l.badge}</span>
                 <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug mb-4">{l.title}</h3>
                 <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{l.body}</p>

@@ -6,6 +6,8 @@ export interface SnippetItem {
   title: string;
   body: string;
   cta: string;
+  illustration?: string;
+  illustrationAlt?: string;
 }
 
 interface Props {
@@ -37,6 +39,11 @@ const SnippetSection = ({ heading, intro, items }: Props) => (
             transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
             className="bg-card border border-border rounded-xl p-6 md:p-8 flex flex-col hover:shadow-md transition-shadow"
           >
+            {item.illustration && (
+              <div className="rounded-lg bg-accent/15 h-40 md:h-44 flex items-center justify-center mb-6 overflow-hidden">
+                <img src={item.illustration} alt={item.illustrationAlt ?? ""} width={360} height={200} className="h-32 md:h-36 w-auto" loading="lazy" />
+              </div>
+            )}
             <h3 className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug mb-4">{item.title}</h3>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-6 flex-1">{item.body}</p>
             <a
